@@ -8,7 +8,7 @@ namespace CameraSystem
     {
         [SerializeField] private PlayerInputManager playerInputManager;
         [SerializeField] private CinemachineTargetGroup targetGroup;
-        
+
         private void OnEnable()
         {
             playerInputManager.onPlayerJoined += OnPlayerJoined;
@@ -24,15 +24,12 @@ namespace CameraSystem
 
         private void OnPlayerJoined(PlayerInput playerInput)
         {
-            print("player joined");
-            targetGroup.AddMember(playerInput.transform, 1,1);
+            targetGroup.AddMember(playerInput.transform, 1, 1);
         }
+
         private void OnPlayerLeft(PlayerInput playerInput)
         {
             targetGroup.RemoveMember(playerInput.transform);
-
         }
-
-        
     }
 }

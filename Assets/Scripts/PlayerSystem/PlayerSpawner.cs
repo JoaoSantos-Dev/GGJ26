@@ -11,7 +11,6 @@ namespace Playersystem
     {
         [SerializeField] private float spawnRadius = 5;
         private PlayerInputManager inputController;
-        public event Action<Transform,int> PlayerCountUpdate;
         private void Awake()
         {
             inputController = GetComponent<PlayerInputManager>();
@@ -31,8 +30,6 @@ namespace Playersystem
         public void OnPlayerJoined(PlayerInput playerInput)
         {
             SetRandomPosition(playerInput.transform);
-            PlayerCountUpdate?.Invoke(playerInput.transform, playerInput.playerIndex);
-
         }
 
 

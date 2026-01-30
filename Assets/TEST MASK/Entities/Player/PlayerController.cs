@@ -1,21 +1,30 @@
+using System;
+using Playersystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : EntityBase
+public class PlayerController : EntityBase, IDamageable
 {
-    [SerializeField] private float playerDefaultSpeed;
+    [field: SerializeField]
+    [field: Min(0)]
+    public int Health { get; set; } = 100;
 
+    [SerializeField] private float playerDefaultSpeed;
+    private PlayerInputController inputController;
+    private int maxHealth;
+    private PlayerInput playerInput;
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerInventoryController InventoryController { get; private set; }
-    public PlayerInput playerInput;
-    private PlayerInputController inputController;
+
     private void Awake()
     {
-            
-        inputController = new PlayerInputController(playerInput);
-        MovementHandler = new PlayerMovementHandler(transform, playerDefaultSpeed, () => inputController.MovementDirection);
+        maxHealth = Health;
+        inputController = new PlayerInputController(GetComponent<PlayerInput>());
+        MovementHandler =
+            new PlayerMovementHandler(transform, playerDefaultSpeed, () => inputController.MovementDirection);
         InventoryController = new PlayerInventoryController(MovementHandler as PlayerMovementHandler);
-        StateMachine = new PlayerStateMachine(inputController, InventoryController, MovementHandler as PlayerMovementHandler);
+        StateMachine = new PlayerStateMachine(inputController, InventoryController,
+            MovementHandler as PlayerMovementHandler);
     }
 
     private void Update()
@@ -40,11 +49,19 @@ public class PlayerController : EntityBase
             if (mask == InventoryController.EquipedMask) return;
 
             DestroyChildren();
-            GameObject maskChild = Instantiate(mask.gameObject, transform);
+            var maskChild = Instantiate(mask.gameObject, transform);
             maskChild.transform.localPosition = Vector3.zero;
             InventoryController.EquipMask(maskChild.GetComponent<MaskBase>());
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        Health -= Mathf.Clamp(damage, 0, maxHealth);
+        HealthChanged?.Invoke(Health);
+    }
+
+    public event Action<int> HealthChanged;
 
     //Created only for test purposes.
     private void DestroyChildren()
