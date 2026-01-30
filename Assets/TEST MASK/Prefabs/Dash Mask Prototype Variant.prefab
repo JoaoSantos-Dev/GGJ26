@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7701928622200854891
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2322393430154408430, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_Color.b
+      value: 0.97627497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322393430154408430, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505555930961692661, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505555930961692661, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136885043991760891, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_Name
+      value: Dash Mask Prototype Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4136885043991760891, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4128545876735506521}
+  m_SourcePrefab: {fileID: 100100000, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+--- !u!1 &6020068337972893328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4136885043991760891, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+  m_PrefabInstance: {fileID: 7701928622200854891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4128545876735506521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6020068337972893328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0d4662328b137428aa32ecd4e5c97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DashMask
+  <MaskSprite>k__BackingField: {fileID: 0}
+  <MaskDuration>k__BackingField: 0
+  <HabilityCooldown>k__BackingField: 0
+  dashDistance: 5
+  dashSpeed: 0.3
