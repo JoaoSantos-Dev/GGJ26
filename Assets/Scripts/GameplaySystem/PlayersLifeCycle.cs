@@ -29,18 +29,33 @@ namespace GameplaySystem
         private void OnPlayerJoined(PlayerInput playerInput)
         {
             var playerController = playerInput.GetComponent<PlayerController>();
-            players.Add(playerController);
-            OnPlayerEnter?.Invoke(playerController);
-            PlayerCountUpdate?.Invoke(players.Count);
+            playerController.Death += OnPlayerDeath;
+            AddPlayer(playerController);
         }
-
+        
         private void OnPlayerLeft(PlayerInput playerInput)
         {
             var playerController = playerInput.GetComponent<PlayerController>();
-            players.Remove(playerController);
-            OnPlayerExit?.Invoke(playerController);
+            playerController.Death -= OnPlayerDeath;
+            RemovePlayer(playerController);
+        }
+        
+        private void AddPlayer(PlayerController player)
+        {
+            players.Add(player);
+            OnPlayerEnter?.Invoke(player);
             PlayerCountUpdate?.Invoke(players.Count);
+        }
 
+        private void RemovePlayer(PlayerController player)
+        {
+            players.Remove(player);
+            OnPlayerExit?.Invoke(player);
+            PlayerCountUpdate?.Invoke(players.Count);
+        }
+        private void OnPlayerDeath(PlayerController player)
+        {
+            RemovePlayer(player);
         }
 
 
