@@ -11,14 +11,7 @@ namespace Playersystem
     {
         private const int spawnRadius = 3;
         [SerializeField]  private PlayerInputManager inputController;
-
-
-
-        private void Awake()
-        {
-            inputController = GetComponent<PlayerInputManager>();
-        }
-
+        
         private void Start()
         {
             inputController.onPlayerJoined += OnPlayerJoined;
@@ -38,7 +31,7 @@ namespace Playersystem
 
         private void SetRandomPosition(Transform transform)
         {      
-            Vector3 randomPosition = UnityEngine.Random.insideUnitCircle * spawnRadius / 2;
+            Vector3 randomPosition = UnityEngine.Random.insideUnitCircle * spawnRadius / 2*transform.lossyScale.magnitude;
             randomPosition.z = randomPosition.y;
             randomPosition.y = 0;
             transform.position = this.transform.position +  randomPosition;
@@ -48,7 +41,7 @@ namespace Playersystem
 
         private void OnDrawGizmosSelected()
         {
-            Gizmos.DrawWireSphere(transform.position, spawnRadius);
+            Gizmos.DrawWireSphere(transform.position, spawnRadius*transform.lossyScale.magnitude);
         }
     }
     

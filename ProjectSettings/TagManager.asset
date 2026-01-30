@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 4132460221
+    locked: 0
+  - name: Props
+    uniqueID: 3138387201
+    locked: 0
   - name: HUD
     uniqueID: 1394461879
     locked: 0

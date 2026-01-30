@@ -116,15 +116,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 165616434105863602, guid: 2d0c52cf98b248043b590885317673ed, type: 3}
       propertyPath: m_Name
-      value: InputManager
+      value: playerSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 7195430091549037308, guid: 2d0c52cf98b248043b590885317673ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -425.45853
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7195430091549037308, guid: 2d0c52cf98b248043b590885317673ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -258.17456
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7195430091549037308, guid: 2d0c52cf98b248043b590885317673ed, type: 3}
       propertyPath: m_LocalPosition.z

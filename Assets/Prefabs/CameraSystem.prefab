@@ -363,5 +363,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175218ef706ea8343a897182664612fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraSystem.CameraController
-  playerInputManager: {fileID: 0}
+  playersLifeCycle: {fileID: 0}
   targetGroup: {fileID: 3457341649711692772}
