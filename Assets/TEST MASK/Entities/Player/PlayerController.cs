@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : EntityBase
 {
@@ -6,11 +7,12 @@ public class PlayerController : EntityBase
 
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerInventoryController InventoryController { get; private set; }
-
+    public PlayerInput playerInput;
     private PlayerInputController inputController;
     private void Awake()
     {
-        inputController = new PlayerInputController();
+            
+        inputController = new PlayerInputController(playerInput);
         MovementHandler = new PlayerMovementHandler(transform, playerDefaultSpeed, () => inputController.MovementDirection);
         InventoryController = new PlayerInventoryController(MovementHandler as PlayerMovementHandler);
         StateMachine = new PlayerStateMachine(inputController, InventoryController, MovementHandler as PlayerMovementHandler);
