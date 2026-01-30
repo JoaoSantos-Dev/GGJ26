@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105b18360706dbe408e7c7c741038f3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.PlayerHUDManager
-  playerInputManager: {fileID: 0}
+  playersLifeCycle: {fileID: 0}
   playerHUDs:
   - {fileID: 1703540646760288670}
   - {fileID: 4651026272026762808}
@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3349541033584645410, guid: f9022f88e70a05241aad7e29b68bfc34, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -98.723
+      value: -98.72299
       objectReference: {fileID: 0}
     - target: {fileID: 3349541033584645410, guid: f9022f88e70a05241aad7e29b68bfc34, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -305,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3349541033584645410, guid: f9022f88e70a05241aad7e29b68bfc34, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3349541033584645410, guid: f9022f88e70a05241aad7e29b68bfc34, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3349541033584645410, guid: f9022f88e70a05241aad7e29b68bfc34, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000061035156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3349541033584645410, guid: f9022f88e70a05241aad7e29b68bfc34, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -579,11 +579,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3349541033584645410, guid: f9022f88e70a05241aad7e29b68bfc34, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 209.611
+      value: 209.61102
       objectReference: {fileID: 0}
     - target: {fileID: 3349541033584645410, guid: f9022f88e70a05241aad7e29b68bfc34, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -98.723
+      value: -98.72299
       objectReference: {fileID: 0}
     - target: {fileID: 3349541033584645410, guid: f9022f88e70a05241aad7e29b68bfc34, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -16,6 +16,8 @@ public class PlayerController : EntityBase, IDamageable
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerInventoryController InventoryController { get; private set; }
 
+    public event Action<int> HealthChanged;
+    public event Action Death;
     private void Awake()
     {
         maxHealth = Health;
@@ -30,6 +32,7 @@ public class PlayerController : EntityBase, IDamageable
     private void Update()
     {
         StateMachine.Update();
+        if (inputController.Hability.WasPressedThisFrame()) TakeDamage(20);
     }
 
     private void FixedUpdate()
@@ -59,9 +62,11 @@ public class PlayerController : EntityBase, IDamageable
     {
         Health -= Mathf.Clamp(damage, 0, maxHealth);
         HealthChanged?.Invoke(Health);
+        if (Health == 0) Death?.Invoke();
     }
 
-    public event Action<int> HealthChanged;
+
+
 
     //Created only for test purposes.
     private void DestroyChildren()

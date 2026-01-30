@@ -9,8 +9,11 @@ namespace Playersystem
 
     public class PlayerSpawner : MonoBehaviour
     {
-        [SerializeField] private float spawnRadius = 5;
-        private PlayerInputManager inputController;
+        private const int spawnRadius = 3;
+        [SerializeField]  private PlayerInputManager inputController;
+
+
+
         private void Awake()
         {
             inputController = GetComponent<PlayerInputManager>();

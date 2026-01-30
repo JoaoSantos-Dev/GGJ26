@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using GameplaySystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,8 +7,7 @@ namespace UI
 {
     public class PlayerHudManager : MonoBehaviour
     {
-        [SerializeField] private PlayerInputManager playerInputManager;
-
+        [SerializeField] PlayersLifeCycle playersLifeCycle;
         [SerializeField] private PlayerHUD[] playerHUDs;
         private readonly Dictionary<PlayerController, PlayerHUD> playerHUDMap = new();
         private int playerCount = -1;
@@ -19,30 +19,29 @@ namespace UI
 
         private void OnEnable()
         {
-            playerInputManager.onPlayerJoined += OnPlayerJoined;
-            playerInputManager.onPlayerLeft += OnPlayerLeft;
+            playersLifeCycle.OnPlayerEnter += OnPlayerJoined;
+            playersLifeCycle.OnPlayerExit += OnPlayerLeft;
         }
 
         private void OnDisable()
-        {
-            playerInputManager.onPlayerJoined -= OnPlayerJoined;
-            playerInputManager.onPlayerLeft -= OnPlayerLeft;
+        {            
+            playersLifeCycle.OnPlayerEnter -= OnPlayerJoined;
+            playersLifeCycle.OnPlayerExit -= OnPlayerLeft;
+           
         }
 
-        private void OnPlayerJoined(PlayerInput playerInput)
+        private void OnPlayerJoined(PlayerController playerController)
         {
             playerCount++;
-            var playerController = playerInput.GetComponent<PlayerController>();
             var currentHud = playerHUDs[playerCount];
             currentHud.gameObject.SetActive(true);
             currentHud.Initialize(playerController);
             playerHUDMap.Add(playerController, playerHUDs[playerCount]);
         }
 
-        private void OnPlayerLeft(PlayerInput playerInput)
+        private void OnPlayerLeft(PlayerController playerController)
         {
             playerCount--;
-            var playerController = playerInput.GetComponent<PlayerController>();
             playerHUDMap[playerController].gameObject.SetActive(false);
             playerHUDMap.Remove(playerController);
         }

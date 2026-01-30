@@ -1,3 +1,4 @@
+using GameplaySystem;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,30 +7,30 @@ namespace CameraSystem
 {
     public class CameraController : MonoBehaviour
     {
-        [SerializeField] private PlayerInputManager playerInputManager;
+        [SerializeField] private PlayersLifeCycle playersLifeCycle;
         [SerializeField] private CinemachineTargetGroup targetGroup;
-
+        
         private void OnEnable()
         {
-            playerInputManager.onPlayerJoined += OnPlayerJoined;
-            playerInputManager.onPlayerLeft += OnPlayerLeft;
+            playersLifeCycle.OnPlayerEnter += OnPlayerJoined;
+            playersLifeCycle.OnPlayerExit += OnPlayerLeft;
         }
 
         private void OnDisable()
         {
-            playerInputManager.onPlayerJoined -= OnPlayerJoined;
-            playerInputManager.onPlayerLeft -= OnPlayerLeft;
+            playersLifeCycle.OnPlayerEnter -= OnPlayerJoined;
+            playersLifeCycle.OnPlayerExit -= OnPlayerLeft;
         }
 
 
-        private void OnPlayerJoined(PlayerInput playerInput)
+        private void OnPlayerJoined(PlayerController player)
         {
-            targetGroup.AddMember(playerInput.transform, 1, 1);
+            targetGroup.AddMember(player.transform, 1, 1);
         }
 
-        private void OnPlayerLeft(PlayerInput playerInput)
+        private void OnPlayerLeft(PlayerController player)
         {
-            targetGroup.RemoveMember(playerInput.transform);
+            targetGroup.RemoveMember(player.transform);
         }
     }
 }
