@@ -8,11 +8,11 @@ namespace GameplaySystem
     public class PlayersLifeCycle : MonoBehaviour 
     {
         [SerializeField] PlayerInputManager playerInputManager;
-        private List<PlayerController> players = new();
+        public List<PlayerController> Players { get; private set; } = new();
 
         public event Action<PlayerController> OnPlayerEnter;
         public event Action<PlayerController> OnPlayerExit;
-        public event Action<int> PlayerCountUpdate;
+        public int PlayerCount => Players.Count;
         
         private void OnEnable()
         {
@@ -42,17 +42,16 @@ namespace GameplaySystem
         
         private void AddPlayer(PlayerController player)
         {
-            players.Add(player);
+            Players.Add(player);
             OnPlayerEnter?.Invoke(player);
-            PlayerCountUpdate?.Invoke(players.Count);
         }
 
         private void RemovePlayer(PlayerController player)
         {
-            players.Remove(player);
+            Players.Remove(player);
             OnPlayerExit?.Invoke(player);
-            PlayerCountUpdate?.Invoke(players.Count);
         }
+        
         private void OnPlayerDeath(PlayerController player)
         {
             RemovePlayer(player);
