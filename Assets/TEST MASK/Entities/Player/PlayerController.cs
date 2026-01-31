@@ -118,18 +118,17 @@ public class PlayerController : EntityBase, IDamageable
     
     public async void ApplyHitEffect()
     {
-        //TODO: colocar em Cache o sprite regular da face do personagem
-        var normalSprite = headRenderer.sprite;
         maskRenderer.transform.localPosition = hitMaskLocalPosition;
         maskRenderer.transform.rotation = Quaternion.Euler(hitMaskLocalRotation);
         
         headRenderer.sprite = CharacterSprites.HitFace;
         headRenderer.color = Color.red;
         characterRenderer.color = Color.red;
-        characterRenderer.DOColor(Color.white, 0.3f);
-        headRenderer.DOColor(Color.white, 0.3f);
+        characterRenderer.DOColor(VisualConfig.Color, 0.3f);
+        headRenderer.DOColor(VisualConfig.Color, 0.3f);
+        
         await UniTask.Delay(300);
-        headRenderer.sprite = normalSprite;
+        headRenderer.sprite = VisualConfig.HeadSprite;
         maskRenderer.transform.localPosition = Vector3.up * 2;
         maskRenderer.transform.rotation = quaternion.identity;
 
