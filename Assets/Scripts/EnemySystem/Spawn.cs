@@ -4,6 +4,7 @@ namespace GameplaySystem.Spawning
 {
     public class EnemySpawner : MonoBehaviour
     {
+    //SCRIPT TEMPORARIO DE SPAWN
         [Header("Enemy Selection")]
         [Tooltip("Add enemy prefabs to this list in the Inspector")]
         [SerializeField] private GameObject[] enemyPrefabs;
