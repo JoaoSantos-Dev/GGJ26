@@ -16,8 +16,6 @@ namespace GameplaySystem.Spawning
 
         private void Start()
         {
-            // If spawnImmediately is true, timer starts at 0 to trigger Update immediately.
-            // Otherwise, it starts at the interval value.
             _spawnTimer = spawnImmediately ? 0f : spawnInterval;
         }
 
