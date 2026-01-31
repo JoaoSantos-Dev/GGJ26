@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GameplaySystem.AI
 {
-    public class ChargeEnemyIA : MonoBehaviour
+    public class ChargeEnemyAI : MonoBehaviour
     {
         private enum EnemyState { Patrolling, Charging, Dashing }
 
@@ -45,7 +45,6 @@ namespace GameplaySystem.AI
             }
         }
 
-        #region State Logic
 
         private void HandlePatrol()
         {
@@ -84,9 +83,7 @@ namespace GameplaySystem.AI
             }
         }
 
-        #endregion
 
-        #region Helper Methods
 
         private void SetRandomPatrolDirection()
         {
@@ -115,9 +112,6 @@ namespace GameplaySystem.AI
             SetRandomPatrolDirection();
         }
 
-        #endregion
-
-        #region Trigger Events
 
         private void OnTriggerStay2D(Collider2D collision)
         {
@@ -137,6 +131,5 @@ namespace GameplaySystem.AI
             }
         }
 
-        #endregion
     }
 }
