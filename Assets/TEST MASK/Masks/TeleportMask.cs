@@ -17,8 +17,8 @@ public class TeleportMask : MaskBase
         if (randomTeleport)
         {
             // Change the logic to consider the screen/scenary boundries.
-            Vector3 randomDirection = Random.insideUnitCircle * Random.Range(1, teleportRadius + 1);
-            playerMovementHandler.AddToEntityPosition(randomDirection);
+            Vector3 randomPosition = Random.insideUnitCircle * Random.Range(1, teleportRadius + 1);
+            playerMovementHandler.AddToEntityPosition(randomPosition);
         }
         else
         {

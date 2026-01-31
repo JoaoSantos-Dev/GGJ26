@@ -31,7 +31,7 @@ public class PlayerStateMachine
 
     public void TryHabilityState()
     {
-        if (playerInputController.Hability.WasPressedThisFrame() && PlayerInventoryController.EquipedMask != null)
+        if (playerInputController.Hability.WasPressedThisFrame() && PlayerInventoryController.CanUseMaskHability)
         {
             ChangeState(stateFactory.HabilityState);
         }
