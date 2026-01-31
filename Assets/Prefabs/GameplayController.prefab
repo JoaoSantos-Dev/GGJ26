@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19cf7e06e3ef4130b74723103a5e7f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameplaySystem.GameplayController
+  playerSessionData: {fileID: 11400000, guid: 5b79b4f0c74182b4cb2a83c7bb4f0204, type: 2}
   playerInputManager: {fileID: 1210146209235396578}
   playersLifeCycle: {fileID: 8485856495549914804}
 --- !u!114 &8485856495549914804
@@ -61,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea442650489d0394fa6f00871efb493f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameplaySystem.PlayersLifeCycle
+  playerSessionData: {fileID: 11400000, guid: 5b79b4f0c74182b4cb2a83c7bb4f0204, type: 2}
   playerInputManager: {fileID: 1210146209235396578}
 --- !u!114 &1210146209235396578
 MonoBehaviour:

@@ -5,8 +5,9 @@ using UnityEngine.InputSystem;
 
 namespace GameplaySystem
 {
-    public class PlayersLifeCycle : MonoBehaviour 
+    public class PlayersLifeCycle : MonoBehaviour
     {
+        [SerializeField] private PlayerSessionSO playerSessionData;
         [SerializeField] PlayerInputManager playerInputManager;
         public List<PlayerController> Players { get; private set; } = new();
 
@@ -31,6 +32,10 @@ namespace GameplaySystem
             var playerController = playerInput.GetComponent<PlayerController>();
             playerController.Death += OnPlayerDeath;
             AddPlayer(playerController);
+            if (playerSessionData.MaxPlayer == PlayerCount)
+            {
+                playerInputManager.DisableJoining();
+            }
         }
         
         private void OnPlayerLeft(PlayerInput playerInput)
