@@ -966,37 +966,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 444836121722314179, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: playerData
-      value: 
-      objectReference: {fileID: 11400000, guid: c957644dec198da4982c5d8e7ea0d02f, type: 2}
-    - target: {fileID: 1464515547050455559, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_fontSize
-      value: 41.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 1464515547050455559, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 41.64
+    - target: {fileID: 351115660122599298, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1536240981748507607, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 900928095}
-    - target: {fileID: 2444843649949368316, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: playerData
-      value: 
-      objectReference: {fileID: 11400000, guid: 9456d797c46885c41965a405d8c89bdc, type: 2}
-    - target: {fileID: 3716232072258785336, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_text
-      value: "P4\nAperte para come\xE7ar"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3716232072258785336, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_fontSize
-      value: 41.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 3716232072258785336, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 41.64
+    - target: {fileID: 2586382807568573288, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3729327540046316573, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
       propertyPath: m_Pivot.x
@@ -1079,52 +1059,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4708533054257411027, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: playerSession
-      value: 
-      objectReference: {fileID: 11400000, guid: 5b79b4f0c74182b4cb2a83c7bb4f0204, type: 2}
-    - target: {fileID: 4708533054257411027, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
       propertyPath: playerInputManager
       value: 
       objectReference: {fileID: 4623990177983471312}
-    - target: {fileID: 4851680460384397010, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: playerData
-      value: 
-      objectReference: {fileID: 11400000, guid: 6102509417348f64784c300c2f4b7eb3, type: 2}
-    - target: {fileID: 5848980289863649558, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_text
-      value: "P3\nAperte para come\xE7ar"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5848980289863649558, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_fontSize
-      value: 41.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 5848980289863649558, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 41.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6946874913265051355, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: playerData
-      value: 
-      objectReference: {fileID: 11400000, guid: 744031166400c65439bcf57f043f08a0, type: 2}
     - target: {fileID: 7298375015934663830, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
       propertyPath: gameplayController
       value: 
       objectReference: {fileID: 2119934058}
-    - target: {fileID: 8221075742096853279, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_text
-      value: "P2\nAperte para come\xE7ar"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8221075742096853279, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_fontSize
-      value: 41.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 8221075742096853279, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 41.64
-      objectReference: {fileID: 0}
     - target: {fileID: 9051244758813535377, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
       propertyPath: m_Name
       value: UI gameplay Events
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160277035121194032, guid: 716df32d9ece6c240b68bee9d3f8ae50, type: 3}
+      propertyPath: m_Color.a
+      value: 0.94509804
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
