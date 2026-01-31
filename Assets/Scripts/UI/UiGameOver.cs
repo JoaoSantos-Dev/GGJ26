@@ -2,7 +2,7 @@ using Core;
 using UI;
 using UnityEngine;
 
-public class UiGameOver : MonoBehaviour, ISwitchable
+public class UiGameOver : UiSwitch
 {
 
     public void GoToMenu()
@@ -10,8 +10,10 @@ public class UiGameOver : MonoBehaviour, ISwitchable
         SceneLoader.LoadMenuSceneAsync();
     }
 
-    public void SetState(bool state)
+    public void Restart()
     {
-        
+        SceneLoader.LoadGameplaySceneAsync();
     }
+
+
 }

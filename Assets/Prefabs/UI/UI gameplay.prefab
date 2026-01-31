@@ -113,6 +113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI initialization
       objectReference: {fileID: 0}
+    - target: {fileID: 4155824701668178790, guid: c67f5d1afb395384aa042dd6c66fce6f, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8359764076346433163, guid: c67f5d1afb395384aa042dd6c66fce6f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
