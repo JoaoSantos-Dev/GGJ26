@@ -24,7 +24,7 @@ public class PlayerController : EntityBase, IDamageable
     public event Action<PlayerController> Death;
     private void Awake()
     {
-        AnimationController = new AnimationController(maskRenderer, maskRenderer);
+        AnimationController = new AnimationController(characterRenderer, maskRenderer);
         maxHealth = Health;
         inputController = new PlayerInputController(GetComponent<PlayerInput>());
         MovementHandler =
