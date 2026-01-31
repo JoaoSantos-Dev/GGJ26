@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586b78a5b83ea824e872a6db9c2c7606, type: 3}
+  m_Name: SpawnConfig
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnConfig
+  <MaskPrefabs>k__BackingField:
+  - {fileID: 6020068337972893328, guid: 6b9d27b422d91df44b7a017c9e49e1a8, type: 3}
+  - {fileID: 1430477460225216529, guid: 61242c903c7a8d64ebf911f9ba9088b2, type: 3}
+  - {fileID: 5444450632201666098, guid: 6a279bfba31e1b844b781a51b04b6c5d, type: 3}
+  - {fileID: 1843552397000773547, guid: d128468ea56d50347851623b29e67538, type: 3}
+  <SpawnInterval>k__BackingField: 3
+  <MaxMaskOnScreen>k__BackingField: 5

@@ -14,6 +14,11 @@ public class ShieldMask : MaskBase
     private SpriteRenderer spriteRenderer;
 
     public override event Action OnHabilityEnd;
+
+    private void Awake()
+    {
+        MaskType = MaskType.Shield;
+    }
     public override void UseMaskHability()
     {
         base.UseMaskHability();

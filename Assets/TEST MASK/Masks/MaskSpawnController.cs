@@ -1,12 +1,11 @@
-using System.Numerics;
+using UnityEngine;
 
 public class MaskSpawnController 
 {
-    private Vector2 spawnArea;
-    public MaskSpawnController(Vector2 spawnArea)
+    public MaskBase SpawnMask(GameObject maskPrefab, Vector3 position)
     {
-        this.spawnArea = spawnArea;
+        GameObject mask = GameObject.Instantiate(maskPrefab, position, Quaternion.identity);
+        return mask.GetComponent<MaskBase>();
     }
-
 
 }
