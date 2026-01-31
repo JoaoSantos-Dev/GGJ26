@@ -7,13 +7,15 @@ public class AnimationController
     private Vector3 initialScale;
     public SpriteRenderer SpriteRenderer { get; private set; }
     public SpriteRenderer MaskRenderer { get; private set; }
+    public SpriteRenderer HeadRenderer { get; private set; }
     public Animator Animator { get; private set; }
 
     private Tween tween;
-    public AnimationController(SpriteRenderer SpriteRenderer, SpriteRenderer maskRenderer, Animator animator )
+    public AnimationController(SpriteRenderer SpriteRenderer, SpriteRenderer maskRenderer, SpriteRenderer headRenderer, Animator animator )
     {
         this.SpriteRenderer = SpriteRenderer;
         this.MaskRenderer = maskRenderer;
+        this.HeadRenderer = headRenderer;
         this.Animator = animator;
         characterTransform = SpriteRenderer.transform.parent;
         initialScale = characterTransform.lossyScale;
@@ -31,5 +33,12 @@ public class AnimationController
         tween.Kill();
         tween = characterTransform.DOScale(initialScale, 0.1f).SetEase(Ease.InOutQuad);
         Animator.Play(UnityEngine.Animator.StringToHash("Idle"));
+    }
+
+    public void SetFlip(bool flip)
+    {
+        SpriteRenderer.flipX = flip;
+        MaskRenderer.flipX = flip;
+        HeadRenderer.flipX = flip;
     }
 }

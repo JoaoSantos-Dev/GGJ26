@@ -8,6 +8,7 @@ public class PlayerController : EntityBase, IDamageable
 {
     private Animator animator;
     [SerializeField] private SpriteRenderer characterRenderer;
+    [SerializeField] private SpriteRenderer headRenderer;
     [SerializeField] private SpriteRenderer maskRenderer;
     [field: SerializeField]
     [field: Min(0)]
@@ -26,7 +27,7 @@ public class PlayerController : EntityBase, IDamageable
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        AnimationController = new AnimationController(characterRenderer, maskRenderer, animator);
+        AnimationController = new AnimationController(characterRenderer, maskRenderer, headRenderer, animator);
         maxHealth = Health;
         inputController = new PlayerInputController(GetComponent<PlayerInput>());
         MovementHandler =
