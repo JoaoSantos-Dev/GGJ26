@@ -4,10 +4,13 @@ using System.Collections;
 namespace GameplaySystem.Spawning
 {
     [RequireComponent(typeof(BoxCollider2D))]
-    public class WaveSpawnerArea2D : MonoBehaviour
+    public class WaveSpawnerArea : MonoBehaviour
     {
         public WaveData config;
         public float intervaloEntreHordas = 5f;
+
+        public float TempoAteProximaHorda { get; private set; }
+        public bool EmIntervaloEntreHordas { get; private set; }
 
         private BoxCollider2D area;
 
@@ -27,12 +30,19 @@ namespace GameplaySystem.Spawning
         {
             for (int i = 0; i < config.hordas.Count; i++)
             {
-                Debug.Log($"Iniciando: {config.hordas[i].nomeDaHorda}");
                 yield return StartCoroutine(RunHorde(config.hordas[i]));
 
-                yield return new WaitForSeconds(intervaloEntreHordas);
+                EmIntervaloEntreHordas = true;
+                TempoAteProximaHorda = intervaloEntreHordas;
+
+                while (TempoAteProximaHorda > 0)
+                {
+                    TempoAteProximaHorda -= Time.deltaTime;
+                    yield return null;
+                }
+
+                EmIntervaloEntreHordas = false;
             }
-            Debug.Log("Todas as hordas concluídas!");
         }
 
         private IEnumerator RunHorde(Wave horda)

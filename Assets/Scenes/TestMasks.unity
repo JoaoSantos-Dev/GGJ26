@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveSpawnerArea
   config: {fileID: 11400000, guid: 2b100362889f4b33da7a65e082591cf4, type: 2}
-  intervaloEntreHordas: 5
+  intervaloEntreHordas: 30
 --- !u!1 &1154555119
 GameObject:
   m_ObjectHideFlags: 0

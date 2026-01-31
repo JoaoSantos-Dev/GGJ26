@@ -17,52 +17,73 @@ MonoBehaviour:
     inimigosPossiveis:
     - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
     totalDeInimigos: 10
-    intervaloEntreSpawn: 3
+    intervaloEntreSpawn: 1
     quantidadePorVez: 5
   - nomeDaHorda: Horda 2
     inimigosPossiveis:
-    - {fileID: 5763103283403834963, guid: 4a9024a0235d6bd5483b2c240fce6c75, type: 3}
     - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
+    totalDeInimigos: 10
+    intervaloEntreSpawn: 2
+    quantidadePorVez: 5
+  - nomeDaHorda: Horda 3
+    inimigosPossiveis:
+    - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
+    - {fileID: 5312508704468640706, guid: 64418a2926b986256abf3efa02e3b402, type: 3}
+    totalDeInimigos: 10
+    intervaloEntreSpawn: 1
+    quantidadePorVez: 5
+  - nomeDaHorda: Horda 4
+    inimigosPossiveis:
+    - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
+    - {fileID: 5312508704468640706, guid: 64418a2926b986256abf3efa02e3b402, type: 3}
+    totalDeInimigos: 10
+    intervaloEntreSpawn: 1
+    quantidadePorVez: 5
+  - nomeDaHorda: Horda 5
+    inimigosPossiveis:
+    - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
+    - {fileID: 5312508704468640706, guid: 64418a2926b986256abf3efa02e3b402, type: 3}
+    - {fileID: 5763103283403834963, guid: 4a9024a0235d6bd5483b2c240fce6c75, type: 3}
     totalDeInimigos: 15
-    intervaloEntreSpawn: 10
-    quantidadePorVez: 2
-  - nomeDaHorda: 
-    inimigosPossiveis: []
-    totalDeInimigos: 0
-    intervaloEntreSpawn: 0
-    quantidadePorVez: 0
-  - nomeDaHorda: 
-    inimigosPossiveis: []
-    totalDeInimigos: 0
-    intervaloEntreSpawn: 0
-    quantidadePorVez: 0
-  - nomeDaHorda: 
-    inimigosPossiveis: []
-    totalDeInimigos: 0
-    intervaloEntreSpawn: 0
-    quantidadePorVez: 0
-  - nomeDaHorda: 
-    inimigosPossiveis: []
-    totalDeInimigos: 0
-    intervaloEntreSpawn: 0
-    quantidadePorVez: 0
-  - nomeDaHorda: 
-    inimigosPossiveis: []
-    totalDeInimigos: 0
-    intervaloEntreSpawn: 0
-    quantidadePorVez: 0
-  - nomeDaHorda: 
-    inimigosPossiveis: []
-    totalDeInimigos: 0
-    intervaloEntreSpawn: 0
-    quantidadePorVez: 0
-  - nomeDaHorda: 
-    inimigosPossiveis: []
-    totalDeInimigos: 0
-    intervaloEntreSpawn: 0
-    quantidadePorVez: 0
-  - nomeDaHorda: 
-    inimigosPossiveis: []
-    totalDeInimigos: 0
-    intervaloEntreSpawn: 0
-    quantidadePorVez: 0
+    intervaloEntreSpawn: 1
+    quantidadePorVez: 5
+  - nomeDaHorda: Horda 6
+    inimigosPossiveis:
+    - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
+    - {fileID: 5312508704468640706, guid: 64418a2926b986256abf3efa02e3b402, type: 3}
+    - {fileID: 5763103283403834963, guid: 4a9024a0235d6bd5483b2c240fce6c75, type: 3}
+    totalDeInimigos: 15
+    intervaloEntreSpawn: 1
+    quantidadePorVez: 5
+  - nomeDaHorda: Horda 7
+    inimigosPossiveis:
+    - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
+    - {fileID: 5312508704468640706, guid: 64418a2926b986256abf3efa02e3b402, type: 3}
+    - {fileID: 5763103283403834963, guid: 4a9024a0235d6bd5483b2c240fce6c75, type: 3}
+    totalDeInimigos: 15
+    intervaloEntreSpawn: 1
+    quantidadePorVez: 5
+  - nomeDaHorda: Horda 8
+    inimigosPossiveis:
+    - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
+    - {fileID: 5312508704468640706, guid: 64418a2926b986256abf3efa02e3b402, type: 3}
+    - {fileID: 5763103283403834963, guid: 4a9024a0235d6bd5483b2c240fce6c75, type: 3}
+    totalDeInimigos: 15
+    intervaloEntreSpawn: 1
+    quantidadePorVez: 5
+  - nomeDaHorda: Horda 9
+    inimigosPossiveis:
+    - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
+    - {fileID: 5312508704468640706, guid: 64418a2926b986256abf3efa02e3b402, type: 3}
+    - {fileID: 5763103283403834963, guid: 4a9024a0235d6bd5483b2c240fce6c75, type: 3}
+    totalDeInimigos: 15
+    intervaloEntreSpawn: 1
+    quantidadePorVez: 5
+  - nomeDaHorda: Horda 10
+    inimigosPossiveis:
+    - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
+    - {fileID: 5312508704468640706, guid: 64418a2926b986256abf3efa02e3b402, type: 3}
+    - {fileID: 5763103283403834963, guid: 4a9024a0235d6bd5483b2c240fce6c75, type: 3}
+    totalDeInimigos: 15
+    intervaloEntreSpawn: 1
+    quantidadePorVez: 5
