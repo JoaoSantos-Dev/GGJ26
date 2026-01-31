@@ -97,8 +97,8 @@ public class PlayerController : EntityBase, IDamageable
         Destroy(gameObject);
     }
 
-    private Vector3 hitMaskLocalPosition = new Vector3(-1, 4.2f, 0.5f);
-    private Vector3 hitMaskLocalRotation = new Vector3(35, 33, 20);
+    private static readonly Vector3 hitMaskLocalPosition = new Vector3(-.5f, 4.2f, 0.5f);
+    private static readonly Vector3 hitMaskLocalRotation = new Vector3(55, 8, 4);
     
     public async void ApplyHitEffect()
     {
