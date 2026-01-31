@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d196e74276bb06a4198e5c92ebc60ee6, type: 3}
+  m_Name: CharacterSprites
+  m_EditorClassIdentifier: Assembly-CSharp::Core.CharacterSpritesSO
+  <Heads>k__BackingField:
+  - {fileID: -6265136392211227296, guid: 3f5887e9d17f50d41846d202c3ab07d4, type: 3}
+  <HitFace>k__BackingField: {fileID: -59066101396820148, guid: 087c1e91957dcfd48bdb79b11c27596c, type: 3}
+  Masks:
+    _serializedList: []
