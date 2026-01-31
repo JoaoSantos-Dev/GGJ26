@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: CharacterSprites
   m_EditorClassIdentifier: Assembly-CSharp::Core.CharacterSpritesSO
   <Heads>k__BackingField:
-  - {fileID: -6265136392211227296, guid: 3f5887e9d17f50d41846d202c3ab07d4, type: 3}
-  <HitFace>k__BackingField: {fileID: -59066101396820148, guid: 087c1e91957dcfd48bdb79b11c27596c, type: 3}
+  - {fileID: 21300000, guid: 3f5887e9d17f50d41846d202c3ab07d4, type: 3}
+  - {fileID: 21300000, guid: 33aacf2ed51136e42926142706a2fc3d, type: 3}
+  - {fileID: 21300000, guid: 80b5be4ac0ed6e746af048e70de198ff, type: 3}
+  - {fileID: 21300000, guid: 11efbda11a9ed3b40b7364a4e296a405, type: 3}
+  <HitFace>k__BackingField: {fileID: 21300000, guid: 087c1e91957dcfd48bdb79b11c27596c, type: 3}
   Masks:
     _serializedList: []

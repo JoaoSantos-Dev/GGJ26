@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Player3
   m_EditorClassIdentifier: Assembly-CSharp::Core.PlayerDataSO
   <Id>k__BackingField: 3
-  <Color>k__BackingField: {r: 1, g: 0.55878204, b: 0, a: 1}
+  <Color>k__BackingField: {r: 0.9547169, g: 0.6777254, b: 0.32964748, a: 1}
