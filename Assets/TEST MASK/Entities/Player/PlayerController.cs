@@ -8,8 +8,23 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
+public class CharacterData
+{
+    public Color Color { get; set; }
+    public Sprite HeadSprite { get; set; }
+
+    public CharacterData(Sprite sprite, Color color)
+    {
+        this.Color = color;
+        this.HeadSprite = sprite;
+        
+    }
+    
+}
+
 public class PlayerController : EntityBase, IDamageable
 {
+    public CharacterData VisualConfig { get; set; }
     [field: SerializeField] public CharacterSpritesSO CharacterSprites { get; private set; }
     private Animator animator;
     [SerializeField] private SpriteRenderer characterRenderer;
@@ -26,6 +41,7 @@ public class PlayerController : EntityBase, IDamageable
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerInventoryController InventoryController { get; private set; }
     public AnimationController AnimationController {get; private set;}
+    
 
     public event Action<int> HealthChanged;
     public event Action<PlayerController> Death;
@@ -118,5 +134,14 @@ public class PlayerController : EntityBase, IDamageable
         maskRenderer.transform.rotation = quaternion.identity;
 
 
+    }
+
+    public void SetVisual(Sprite head, Color color)
+    {
+        VisualConfig = new(head, color);
+        headRenderer.sprite = VisualConfig.HeadSprite;
+        headRenderer.color = VisualConfig.Color;
+        characterRenderer.color = VisualConfig.Color;
+        
     }
 }

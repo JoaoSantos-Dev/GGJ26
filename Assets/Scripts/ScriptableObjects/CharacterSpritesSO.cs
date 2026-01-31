@@ -21,7 +21,12 @@ namespace Core
         [ SerializedDictionary("Mask", "sprite")]
         public SerializedDictionary<MaskType, Sprite> Masks;
 
-
+       
+        public Sprite GetRandomHeadSprite()
+        {
+            int randomIndex = Random.Range(0, Heads.Length);
+            return Heads[randomIndex];
+        }
 
     }
 }

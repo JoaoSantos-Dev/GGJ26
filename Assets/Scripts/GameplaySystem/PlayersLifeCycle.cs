@@ -34,6 +34,7 @@ namespace GameplaySystem
             var playerController = playerInput.GetComponent<PlayerController>();
             playerController.Death += OnPlayerDeath;
             AddPlayer(playerController);
+            SetPlayerVisualConfigs(playerController);
             if (gameSessionData.MaxPlayer == PlayerCount)
             {
                 playerInputManager.DisableJoining();
@@ -64,6 +65,13 @@ namespace GameplaySystem
             RemovePlayer(player);
         }
 
+
+        private void SetPlayerVisualConfigs(PlayerController playerController)
+        {
+            var color = gameSessionData.playerDatas[PlayerCount - 1].Color;
+            var headSprite = gameSessionData.characterSprites.GetRandomHeadSprite();
+            playerController.SetVisual(headSprite,color);
+        }
 
     }
 }

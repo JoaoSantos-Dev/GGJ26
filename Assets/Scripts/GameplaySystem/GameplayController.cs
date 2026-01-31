@@ -31,7 +31,7 @@ namespace GameplaySystem
             victoryCondition.PlayerWin += OnPlayerWin;
         }
 
-        private void OnPlayerEnter(PlayerController obj)
+        private void OnPlayerEnter(PlayerController player)
         {
             if (playersLifeCycle.PlayerCount == gameSessionData.MaxPlayer)
             {

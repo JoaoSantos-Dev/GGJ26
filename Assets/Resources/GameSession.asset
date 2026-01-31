@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: GameSession
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSessionSO
   <MaxPlayer>k__BackingField: 1
+  <playerDatas>k__BackingField:
+  - {fileID: 11400000, guid: c957644dec198da4982c5d8e7ea0d02f, type: 2}
+  - {fileID: 11400000, guid: 744031166400c65439bcf57f043f08a0, type: 2}
+  - {fileID: 11400000, guid: 6102509417348f64784c300c2f4b7eb3, type: 2}
+  - {fileID: 11400000, guid: 9456d797c46885c41965a405d8c89bdc, type: 2}
+  <characterSprites>k__BackingField: {fileID: 11400000, guid: 850e517d895c7a042b77761583b851d7, type: 2}
