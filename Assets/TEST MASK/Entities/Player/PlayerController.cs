@@ -54,12 +54,18 @@ public class PlayerController : EntityBase, IDamageable
 
             /*Mask collider of effect overlaps with the player's, causing it to be an extension of him. Remember to adjust on each
             mask class that creates an effect collider to calculate an offset based on the boundries of the player's collider */
-            if (mask == InventoryController.EquipedMask) return;
 
-            DestroyChildren();
-            var maskChild = Instantiate(mask.gameObject, transform);
-            maskChild.transform.localPosition = Vector3.zero;
-            InventoryController.EquipMask(maskChild.GetComponent<MaskBase>());
+            //DestroyChildren();
+           
+            InventoryController.TryGetNewMask(mask);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out MaskBase mask))
+        {
+            InventoryController.ResetEquipCooldown();
         }
     }
 
@@ -69,9 +75,6 @@ public class PlayerController : EntityBase, IDamageable
         HealthChanged?.Invoke(Health);
         if (Health == 0) Death?.Invoke(this);
     }
-
-
-
 
     //Created only for test purposes.
     private void DestroyChildren()

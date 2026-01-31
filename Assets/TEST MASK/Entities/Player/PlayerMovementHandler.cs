@@ -19,7 +19,7 @@ public class PlayerMovementHandler : MovementHandler
     public void UpdatePlayerMovement()
     {
         var direction = new Vector3(CurrentMovementDirection.x, CurrentMovementDirection.y, 0);
-        entityTransform.position += direction * playerSpeed * Time.deltaTime;
+        EntityTransform.position += direction * playerSpeed * Time.deltaTime;
         SaveLastMovementDirection();
     }
 
