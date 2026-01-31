@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using GameplaySystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace GameplaySystem
 {
     public class GameplayController : MonoBehaviour
     {
-        [SerializeField] private PlayerSessionSO playerSessionData;
+        [FormerlySerializedAs("playerSessionData")] [SerializeField] private GameSessionSO gameSessionData;
         [SerializeField] private PlayerInputManager  playerInputManager;
         [SerializeField] private PlayersLifeCycle playersLifeCycle;
         private VictoryCondition victoryCondition;
@@ -31,7 +32,7 @@ namespace GameplaySystem
 
         private void OnPlayerEnter(PlayerController obj)
         {
-            if (playersLifeCycle.PlayerCount == playerSessionData.MaxPlayer)
+            if (playersLifeCycle.PlayerCount == gameSessionData.MaxPlayer)
             {
                 gameStarted = true;
                 GameStart?.Invoke();

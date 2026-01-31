@@ -2,13 +2,14 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace UI
 {
 
     public class UIGameplayInicialization : UiSwitch
     {
-        [SerializeField] private PlayerSessionSO playerSession;
+        [FormerlySerializedAs("playerSession")] [SerializeField] private GameSessionSO gameSession;
         [SerializeField] private PlayerInputManager playerInputManager;
         private UiInputConfirmation[] uiInputConfirmations;
         private int playerCount = -1;
@@ -22,7 +23,7 @@ namespace UI
                 uiInputconfirmation.gameObject.SetActive(false);
             }
 
-            for (int i = 0; i < playerSession.MaxPlayer; i++)
+            for (int i = 0; i < gameSession.MaxPlayer; i++)
             {
                 uiInputConfirmations[i].gameObject.SetActive(true);
             }

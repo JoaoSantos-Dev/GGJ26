@@ -9,7 +9,7 @@ namespace UI
 {
     public class PlayerSessionSelector : MonoBehaviour
     {
-        [SerializeField] private PlayerSessionSO playerSessionData;
+        [FormerlySerializedAs("playerSessionData")] [SerializeField] private GameSessionSO gameSessionData;
         [SerializeField, Range(2, 4)] private int playerSessionTarget = 2;
         private Button button;
 
@@ -31,7 +31,7 @@ namespace UI
 
         private void ChoosePlayerSession()
         {
-            playerSessionData.MaxPlayer = playerSessionTarget;
+            gameSessionData.MaxPlayer = playerSessionTarget;
             SceneLoader.LoadGameplaySceneAsync();
         }
         

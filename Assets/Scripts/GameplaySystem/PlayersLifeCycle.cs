@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace GameplaySystem
 {
     public class PlayersLifeCycle : MonoBehaviour
     {
-        [SerializeField] private PlayerSessionSO playerSessionData;
+        [FormerlySerializedAs("playerSessionData")] [SerializeField] private GameSessionSO gameSessionData;
         [SerializeField] PlayerInputManager playerInputManager;
         public List<PlayerController> Players { get; private set; } = new();
 
@@ -32,7 +33,7 @@ namespace GameplaySystem
             var playerController = playerInput.GetComponent<PlayerController>();
             playerController.Death += OnPlayerDeath;
             AddPlayer(playerController);
-            if (playerSessionData.MaxPlayer == PlayerCount)
+            if (gameSessionData.MaxPlayer == PlayerCount)
             {
                 playerInputManager.DisableJoining();
             }
