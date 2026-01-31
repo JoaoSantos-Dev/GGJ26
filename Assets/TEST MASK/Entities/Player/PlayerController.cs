@@ -83,4 +83,9 @@ public class PlayerController : EntityBase, IDamageable
     {
         foreach (Transform child in transform) Destroy(child.gameObject);
     }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
 }

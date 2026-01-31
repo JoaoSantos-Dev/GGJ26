@@ -1,7 +1,8 @@
 
-public enum PlayerStateType { Idle, Movement, Hability }
-public class PlayerStateMachine
+using System;public enum PlayerStateType { Idle, Movement, Hability , Death }
+public class PlayerStateMachine : IDisposable
 {
+    private readonly PlayerController playerController;
     private PlayerInputController playerInputController;
     private PlayerStateFactory stateFactory;
     public PlayerInventoryController PlayerInventoryController { get; private set; }
@@ -12,11 +13,24 @@ public class PlayerStateMachine
         PlayerMovementHandler playerMovementHandler, PlayerController playerController)
     {
         this.playerInputController = playerInputController;
+        this.playerInputController = playerInputController;
         PlayerInventoryController = playerInventoryController;
         stateFactory = new PlayerStateFactory(this,playerController );
         CurrentState = stateFactory.IdleState;
         PlayerMovementHandler = playerMovementHandler;
+        playerController.Death += OnDeath;
     }
+    
+    public void Dispose()
+    {
+        playerController.Death -= OnDeath;
+    }
+
+    private void OnDeath(PlayerController obj)
+    {
+        ChangeState(stateFactory.DeathState);
+    }
+
     public PlayerState CurrentState { get; private set; }
     public PlayerState PreviousState { get; private set; }
 
@@ -94,4 +108,7 @@ public class PlayerStateMachine
         CurrentState = newState;
         CurrentState.OnStateEnter();
     }
+
+
+
 }
