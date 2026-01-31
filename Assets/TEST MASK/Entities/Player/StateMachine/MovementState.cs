@@ -33,7 +33,9 @@ public class MovementState : PlayerState
     {
         var moveDirectionX = stateMachine.PlayerMovementHandler.CurrentMovementDirection.x;
         if (moveDirectionX == 0) return;
-        animationController.SpriteRenderer.flipX = moveDirectionX > 0;
+        var movingToRight = moveDirectionX > 0;
+        animationController.SpriteRenderer.flipX = movingToRight;
+        animationController.MaskRenderer.flipX = movingToRight;
     }
 
     public override void FixedUpdate()

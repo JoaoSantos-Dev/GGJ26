@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 
 public class PlayerController : EntityBase, IDamageable
 {
+    private Animator animator;
     [SerializeField] private SpriteRenderer characterRenderer;
     [SerializeField] private SpriteRenderer maskRenderer;
     [field: SerializeField]
@@ -24,7 +25,8 @@ public class PlayerController : EntityBase, IDamageable
     public event Action<PlayerController> Death;
     private void Awake()
     {
-        AnimationController = new AnimationController(characterRenderer, maskRenderer);
+        animator = GetComponentInChildren<Animator>();
+        AnimationController = new AnimationController(characterRenderer, maskRenderer, animator);
         maxHealth = Health;
         inputController = new PlayerInputController(GetComponent<PlayerInput>());
         MovementHandler =
