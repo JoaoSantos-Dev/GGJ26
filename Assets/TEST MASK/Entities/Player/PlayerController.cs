@@ -2,9 +2,12 @@ using System;
 using Playersystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerController : EntityBase, IDamageable
 {
+    [SerializeField] private SpriteRenderer characterRenderer;
+    [SerializeField] private SpriteRenderer maskRenderer;
     [field: SerializeField]
     [field: Min(0)]
     public int Health { get; set; } = 100;
@@ -15,18 +18,20 @@ public class PlayerController : EntityBase, IDamageable
     private PlayerInput playerInput;
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerInventoryController InventoryController { get; private set; }
+    public AnimationController AnimationController {get; private set;}
 
     public event Action<int> HealthChanged;
     public event Action<PlayerController> Death;
     private void Awake()
     {
+        AnimationController = new AnimationController(maskRenderer, maskRenderer);
         maxHealth = Health;
         inputController = new PlayerInputController(GetComponent<PlayerInput>());
         MovementHandler =
             new PlayerMovementHandler(transform, playerDefaultSpeed, () => inputController.MovementDirection);
         InventoryController = new PlayerInventoryController(MovementHandler as PlayerMovementHandler);
         StateMachine = new PlayerStateMachine(inputController, InventoryController,
-            MovementHandler as PlayerMovementHandler);
+            MovementHandler as PlayerMovementHandler, this);
     }
 
     private void Update()

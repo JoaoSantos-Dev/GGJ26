@@ -7,11 +7,13 @@ public class PlayerStateMachine
     public PlayerInventoryController PlayerInventoryController { get; private set; }
     public PlayerMovementHandler PlayerMovementHandler { get; private set; }
 
-    public PlayerStateMachine(PlayerInputController playerInputController, PlayerInventoryController playerInventoryController, PlayerMovementHandler playerMovementHandler)
+    public PlayerStateMachine(PlayerInputController playerInputController, 
+        PlayerInventoryController playerInventoryController, 
+        PlayerMovementHandler playerMovementHandler, PlayerController playerController)
     {
         this.playerInputController = playerInputController;
         PlayerInventoryController = playerInventoryController;
-        stateFactory = new PlayerStateFactory(this);
+        stateFactory = new PlayerStateFactory(this,playerController );
         CurrentState = stateFactory.IdleState;
         PlayerMovementHandler = playerMovementHandler;
     }
