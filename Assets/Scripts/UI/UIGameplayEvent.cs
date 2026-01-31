@@ -1,4 +1,6 @@
 using System;
+using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using GameplaySystem;
 using UnityEngine;
 
@@ -10,13 +12,13 @@ namespace UI
     public class UIGameplayEvent : MonoBehaviour
     {
         [SerializeField] private GameplayController gameplayController;
-        [SerializeField] private GameObject UiInitialization;
-        [SerializeField] private GameObject UiGameOver;
+        [SerializeField] private UIGameplayInicialization UiInitialization;
+        [SerializeField] private UiGameOver UiGameOver;
 
         private void Start()
         {
-            UiInitialization?.SetActive(true);
-            UiGameOver?.SetActive(false);
+            UiInitialization.SetState(true);
+            UiGameOver?.SetState(false);
         }
 
         private void OnEnable()
@@ -32,15 +34,17 @@ namespace UI
             gameplayController.GameOver -= OnGameOver;
         }
 
-        private void OnGameStart()
+        private async void OnGameStart()
         {
-            UiInitialization?.SetActive(false);
+            await UniTask.Delay(500);
+            UiInitialization.SetState(false);
             
         }
         
-        private void OnGameOver()
-        {
-            UiGameOver?.SetActive(true);
+        private async void OnGameOver()
+        {            
+            await UniTask.Delay(500);
+            UiGameOver.SetState(true);
         }
     }
 }
