@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 
+public enum MaskType { Dash, Shield, Teleport, Push }
 public class MaskBase : MonoBehaviour
 {
     [field: SerializeField] public Sprite MaskSprite { get; private set; }
@@ -12,13 +13,11 @@ public class MaskBase : MonoBehaviour
     [field: SerializeField] public float DropRadius { get; private set; }
     public Cooldown Cooldown { get; private set; }
     public Cooldown MaskDurationCountdown { get; private set; }
+    public MaskType MaskType { get; protected set; }
 
     public event Action OnHabilityUsed;
     public event Action OnDurationExpired;
     public virtual event Action OnHabilityEnd;
-
-    // Related to the test of the mask's destruction. Should be removed when the Mask Spawner is ready.
-    private Vector3 startPosition;
 
     protected PlayerMovementHandler playerMovementHandler;
 
@@ -26,7 +25,6 @@ public class MaskBase : MonoBehaviour
     {
         Cooldown = new Cooldown();
         MaskDurationCountdown = new Cooldown();
-        startPosition = transform.position;
     }
 
     public virtual void UseMaskHability()
@@ -40,6 +38,7 @@ public class MaskBase : MonoBehaviour
     {
         this.playerMovementHandler = playerMovementHandler;
         MaskDurationCountdown.Start(MaskDuration, () => OnDurationExpired?.Invoke());
+        MaskSpawnManager.Instance.UntrackMask(this);
         if (TryGetComponent(out Collider2D collider)) collider.enabled = false;
     }
 
@@ -52,6 +51,7 @@ public class MaskBase : MonoBehaviour
     private void Drop()
     {
         Debug.Log("Dropping Mask");
+        MaskSpawnManager.Instance.TrackMask(this);
         Vector3 randomPosition = UnityEngine.Random.insideUnitCircle * UnityEngine.Random.Range(1, DropRadius + 1);
         transform.parent = null;
         Action completed = null;
@@ -66,16 +66,9 @@ public class MaskBase : MonoBehaviour
         });
     }
 
-    // Must be replaced with the logic to destroy the mask when the duration expires.
-    public void TestDestroy()
+    public void Destroy()
     {
-        transform.parent = null;
-        transform.position = startPosition;
-        if (TryGetComponent(out Collider2D collider))
-        {
-            collider.transform.localScale = Vector3.one;
-            collider.enabled = true;
-        }
+        Destroy(gameObject);
     }
 
 }

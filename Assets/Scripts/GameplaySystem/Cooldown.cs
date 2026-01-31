@@ -10,6 +10,12 @@ public class Cooldown
 
     private Tween tween;
 
+    public void Prepare(float duration, Action onCooldownComplete = null)
+    {
+        if (IsRunning || IsPaused) return;
+        Start(duration, onCooldownComplete);
+        Pause();
+    }
     public void Start(float duration, Action onCooldownComplete = null)
     {
         if (IsRunning) return;

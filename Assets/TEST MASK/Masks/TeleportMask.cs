@@ -10,6 +10,11 @@ public class TeleportMask : MaskBase
     [SerializeField] private float teleportRadius = 10f;
 
     public override event System.Action OnHabilityEnd;
+
+    private void Awake()
+    {
+        MaskType = MaskType.Teleport;
+    }
     public override void UseMaskHability()
     {
         base.UseMaskHability();

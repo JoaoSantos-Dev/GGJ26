@@ -94,7 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DashMask
   <MaskSprite>k__BackingField: {fileID: 0}
-  <MaskDuration>k__BackingField: 0
-  <HabilityCooldown>k__BackingField: 0
+  <MaskDuration>k__BackingField: 7
+  <HabilityCooldown>k__BackingField: 3
+  <DropRadius>k__BackingField: 5
   dashDistance: 5
   dashSpeed: 0.3

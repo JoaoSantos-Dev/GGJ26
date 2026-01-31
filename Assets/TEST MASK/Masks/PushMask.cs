@@ -11,6 +11,11 @@ public class PushMask : MaskBase
     private BoxCollider2D collider;
     private SpriteRenderer spriteRenderer;
     public override event Action OnHabilityEnd;
+
+    private void Awake()
+    {
+        MaskType = MaskType.Push;
+    }
     public override void UseMaskHability()
     {
         base.UseMaskHability();
