@@ -8,6 +8,7 @@ namespace GameplaySystem
 {
     public class GameplayController : MonoBehaviour
     {
+        [SerializeField] private PlayerSessionSO playerSessionData;
         [SerializeField] private PlayerInputManager  playerInputManager;
         [SerializeField] private PlayersLifeCycle playersLifeCycle;
         private VictoryCondition victoryCondition;
@@ -30,7 +31,7 @@ namespace GameplaySystem
 
         private void OnPlayerEnter(PlayerController obj)
         {
-            if (playersLifeCycle.PlayerCount == 2)
+            if (playersLifeCycle.PlayerCount == playerSessionData.MaxPlayer)
             {
                 gameStarted = true;
                 GameStart?.Invoke();
