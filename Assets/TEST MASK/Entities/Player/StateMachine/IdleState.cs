@@ -22,10 +22,13 @@ public class IdleState : PlayerState
         base.Update();
         stateMachine.TryHabilityState();
         stateMachine.TryMovementState();
+        stateMachine.PlayerMovementHandler.UpdatePlayerMovement();
+
     }
 
     public override void FixedUpdate()
     {
+        
         base.FixedUpdate();
     }
 }

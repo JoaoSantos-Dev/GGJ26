@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace GameplaySystem.AI
 {
-    public class GuidedEnemyAI : MonoBehaviour
+    public class GuidedEnemyAI : EnemyAI
     {
         public float speed = 3f;
         public float retargetTime = 30f;
@@ -34,6 +36,8 @@ namespace GameplaySystem.AI
                     target.position,
                     speed * Time.deltaTime
                 );
+                var isLookingRight = (target.position.x - transform.position.x) < 0;
+                enemyController.SetRendererFlip(isLookingRight);
             }
         }
 

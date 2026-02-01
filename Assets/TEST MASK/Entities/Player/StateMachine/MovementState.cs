@@ -24,7 +24,6 @@ public class MovementState : PlayerState
     public override void Update()
     {
         UpdateCharacterRendererFlip();
-        stateMachine.PlayerMovementHandler.UpdatePlayerMovement();
         stateMachine.TryIdleState();
         stateMachine.TryHabilityState();
         base.Update();
@@ -38,7 +37,8 @@ public class MovementState : PlayerState
     }
 
     public override void FixedUpdate()
-    {
+    {                
         base.FixedUpdate();
+        stateMachine.PlayerMovementHandler.UpdatePlayerMovement();
     }
 }

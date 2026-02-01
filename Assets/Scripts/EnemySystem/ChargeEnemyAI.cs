@@ -1,8 +1,20 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace GameplaySystem.AI
 {
-    public class ChargeEnemyAI : MonoBehaviour
+    public class EnemyAI : MonoBehaviour
+    {
+        protected EnemyController enemyController;
+
+        protected virtual void Awake()
+        {
+            enemyController = GetComponent<EnemyController>();
+        }
+        
+    }
+    public class ChargeEnemyAI : EnemyAI
     {
         private enum EnemyState { Patrolling, Charging, Dashing }
 
@@ -43,16 +55,21 @@ namespace GameplaySystem.AI
                     HandleDash();
                     break;
             }
+            enemyController.SetRendererFlip(_patrolDirection.x < 0);
+
         }
 
 
         private void HandlePatrol()
         {
             _patrolTimer -= Time.deltaTime;
+            //Perigoso: pois quando houver obstáculos, o transform será forçado a ocupar o espaço
+            //não respeitando a física.
             transform.Translate(_patrolDirection * patrolSpeed * Time.deltaTime);
 
             if (_patrolTimer <= 0)
             {
+                
                 SetRandomPatrolDirection();
             }
         }
@@ -79,6 +96,8 @@ namespace GameplaySystem.AI
 
             if (_dashTimer <= 0)
             {
+                
+                enemyController.SetScale(Vector3.one);
                 ResetToPatrol();
             }
         }
@@ -89,12 +108,16 @@ namespace GameplaySystem.AI
         {
             _patrolDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
             _patrolTimer = changeDirectionInterval;
+            enemyController.StartMoveAnimation();
         }
 
         private void InitiateDash()
         {
+            enemyController.SetScale(new Vector3(1.2f,0.8f,1),dashDuration);
+
             if (_targetInRange != null)
             {
+
                 _dashDirection = (_targetInRange.position - transform.position).normalized;
                 _currentState = EnemyState.Dashing;
                 _dashTimer = dashDuration;
@@ -120,6 +143,9 @@ namespace GameplaySystem.AI
                 _targetInRange = collision.transform;
                 _currentState = EnemyState.Charging;
                 _chargeTimer = maxChargeTime;
+                enemyController.StopMoveAnimation();
+                enemyController.SetScale(new Vector3(0.8f,1.2f,1),maxChargeTime);
+
             }
         }
 
