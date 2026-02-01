@@ -44,6 +44,9 @@ MonoBehaviour:
   ondaDeInimigo:
     arquivo: {fileID: 8300000, guid: cc690969f959fc71fa67efb3a2620321, type: 3}
     volume: 1
+  musicaDeFundo:
+    arquivo: {fileID: 8300000, guid: a10efcc4f3bb394959cd6e144a090b46, type: 3}
+    volume: 0.3
   cliqueBotao:
     arquivo: {fileID: 0}
     volume: 1

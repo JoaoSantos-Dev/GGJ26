@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public SonsData listaDeSons;
     public GameObject audioSourcePrefab;
     public int poolSize = 10;
+    private AudioSource musicSource;
 
     private float lastStepTime;
     public float stepCooldown = 0.1f;
@@ -26,7 +27,35 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        musicSource = gameObject.AddComponent<AudioSource>();
+        musicSource.loop = true; // Música sempre repete
+        musicSource.playOnAwake = false;
+
         InicializarPool();
+
+        // Se você já tiver a música no SonsData, ela começa aqui:
+        if (listaDeSons != null && listaDeSons.musicaDeFundo != null)
+        {
+            PlayMusic(listaDeSons.musicaDeFundo);
+        }
+    }
+
+    public void PlayMusic(SomConfig config)
+    {
+        if (config == null || config.arquivo == null) return;
+
+        musicSource.clip = config.arquivo;
+        musicSource.volume = config.volume;
+        musicSource.loop = true;
+        musicSource.playOnAwake = false;
+        musicSource.spatialBlend = 0;
+        musicSource.Play();
+    }
+
+    public void StopMusic()
+    {
+        musicSource.Stop();
     }
 
     private void InicializarPool()

@@ -31,6 +31,7 @@ public class SonsData : ScriptableObject
 
     [Header("Sons de Level")]
     public SomConfig ondaDeInimigo;
+    public SomConfig musicaDeFundo;
 
     [Header("Sons de UI")]
     public SomConfig cliqueBotao;
