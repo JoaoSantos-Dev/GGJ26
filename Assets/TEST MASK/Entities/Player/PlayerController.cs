@@ -135,6 +135,14 @@ public class PlayerController : EntityBase, IDamageable
 
     public async void ApplyHitEffect()
     {
+        // --- JOÃO: SOM DE DANO AQUI ---
+        if (AudioManager.Instance != null && AudioManager.Instance.listaDeSons != null)
+        {
+            // som configurado no scriptableoject
+            AudioManager.Instance.PlayEffect(AudioManager.Instance.listaDeSons.tomarDano, transform.position);
+        }
+        // ------------------------------
+
         maskRenderer.transform.localPosition = hitMaskLocalPosition;
         maskRenderer.transform.rotation = Quaternion.Euler(hitMaskLocalRotation);
 

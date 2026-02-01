@@ -10,6 +10,9 @@ public class AudioManager : MonoBehaviour
     public GameObject audioSourcePrefab;
     public int poolSize = 10;
 
+    private float lastStepTime;
+    public float stepCooldown = 0.1f;
+
     private List<AudioSource> pool = new List<AudioSource>();
 
     void Awake()
@@ -39,8 +42,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // --- NOVA FUNÇÃO PLAYEFFECT ---
-    // Agora ela recebe o "SomConfig" (o pacotinho com volume)
     public void PlayEffect(SomConfig config, Vector3 posicao)
     {
         if (config == null || config.arquivo == null)
@@ -55,22 +56,23 @@ public class AudioManager : MonoBehaviour
         {
             source.gameObject.SetActive(true);
 
-            // Se o jogo for 2D, você pode usar a posição do player ou da câmera
             source.transform.position = posicao;
 
             source.clip = config.arquivo;
-            source.volume = config.volume; // <--- AQUI ELE APLICA O SEU VOLUME DO SLIDER
-            source.pitch = Random.Range(0.9f, 1.1f);
+            source.volume = config.volume;
+            source.pitch = Random.Range(0.85f, 1.15f);
             source.Play();
 
             StartCoroutine(DeactivateSource(source, config.arquivo.length));
         }
     }
 
-    // --- NOVA FUNÇÃO PLAYPASSO ---
     public void PlayPasso(Vector3 posicao)
     {
-        // 1. Verifica se a lista existe e tem algo dentro
+        if (Time.time - lastStepTime < stepCooldown) return;
+
+        lastStepTime = Time.time;
+
         if (listaDeSons.passos == null || listaDeSons.passos.Length == 0) return;
 
         SomConfig escolhido;
@@ -82,8 +84,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            // 2. SEGURANÇA: Se o índice atual for maior ou igual ao tamanho da lista (erro de bounds), 
-            // a gente reseta ele para 0 imediatamente.
+
             if (listaDeSons.indiceAtualPasso >= listaDeSons.passos.Length)
             {
                 listaDeSons.indiceAtualPasso = 0;
@@ -91,8 +92,6 @@ public class AudioManager : MonoBehaviour
 
             escolhido = listaDeSons.passos[listaDeSons.indiceAtualPasso];
 
-            // 3. Incrementa o índice e usa o operador % (resto da divisão) 
-            // para garantir que ele sempre volte a 0 quando chegar no fim.
             listaDeSons.indiceAtualPasso = (listaDeSons.indiceAtualPasso + 1) % listaDeSons.passos.Length;
         }
 

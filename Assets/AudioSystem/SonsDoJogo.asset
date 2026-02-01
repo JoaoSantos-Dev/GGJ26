@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: SonsDoJogo
   m_EditorClassIdentifier: Assembly-CSharp::SonsData
   vestirMascara:
-    arquivo: {fileID: 8300000, guid: 95c4db5ceb626c6bfb28a889c95f5422, type: 3}
-    volume: 1
+    arquivo: {fileID: 8300000, guid: e891dd79abe3dea88b86133b4d25f892, type: 3}
+    volume: 0.5
   trocarMascara:
     arquivo: {fileID: 0}
-    volume: 1
+    volume: 0.5
   expirarMascara:
-    arquivo: {fileID: 0}
-    volume: 1
+    arquivo: {fileID: 8300000, guid: dfb0519ee83490683bc83217401a3ba4, type: 3}
+    volume: 0.5
   passos:
   - arquivo: {fileID: 8300000, guid: 96b36f6a42685cff19bf8aaf0f281e01, type: 3}
-    volume: 0.5
+    volume: 0.3
   passosAleatorios: 0
   indiceAtualPasso: 0
   cliqueBotao:

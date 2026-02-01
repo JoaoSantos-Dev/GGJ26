@@ -1151,6 +1151,7 @@ MonoBehaviour:
   listaDeSons: {fileID: 11400000, guid: 49b8f06ec2e1324eab9811b60045eee3, type: 2}
   audioSourcePrefab: {fileID: 2147766457063469103, guid: adfa9a3da1280875380af65334a6a95e, type: 3}
   poolSize: 10
+  stepCooldown: 0.1
 --- !u!4 &1000159757
 Transform:
   m_ObjectHideFlags: 0
@@ -1557,7 +1558,6 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

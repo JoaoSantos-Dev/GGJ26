@@ -14,6 +14,7 @@ public class SonsData : ScriptableObject
     public SomConfig vestirMascara;
     public SomConfig trocarMascara;
     public SomConfig expirarMascara;
+    public SomConfig tomarDano;
 
     [Header("Configuração de Passos")]
     public SomConfig[] passos; // Cada passo pode ter seu volume individual!
