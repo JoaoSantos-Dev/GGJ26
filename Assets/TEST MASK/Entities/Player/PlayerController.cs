@@ -42,17 +42,20 @@ public class PlayerController : EntityBase, IDamageable
     public PlayerInventoryController InventoryController { get; private set; }
     public AnimationController AnimationController {get; private set;}
     
-
+    private Rigidbody2D rigidbody2D;
     public event Action<int> HealthChanged;
     public event Action<PlayerController> Death;
     private void Awake()
     {
+        rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         AnimationController = new AnimationController(characterRenderer, maskRenderer, headRenderer, animator);
         maxHealth = Health;
         inputController = new PlayerInputController(GetComponent<PlayerInput>());
-        MovementHandler =
-            new PlayerMovementHandler(transform, playerDefaultSpeed, () => inputController.MovementDirection);
+        MovementHandler = new PlayerMovementHandler(transform, 
+            rigidbody2D,
+            playerDefaultSpeed, 
+            () => inputController.MovementDirection);
         InventoryController = new PlayerInventoryController(MovementHandler as PlayerMovementHandler);
         StateMachine = new PlayerStateMachine(inputController, InventoryController,
             MovementHandler as PlayerMovementHandler, this);
