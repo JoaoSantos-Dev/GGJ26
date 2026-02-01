@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
 
         if (!waveSpawner.EmIntervaloEntreHordas)
         {
-            waveTimer.text = "";
+            waveTimer.text = "00:00";
             return;
         }
 
