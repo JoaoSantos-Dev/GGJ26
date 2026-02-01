@@ -3,7 +3,7 @@ using UnityEngine;
 namespace GameplaySystem.AI
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class FollowerEnemyAI : MonoBehaviour
+    public class FollowerEnemyAI : EnemyAI
     {
         [Header("Movement")]
         [SerializeField] private float moveSpeed = 3f;
@@ -18,8 +18,12 @@ namespace GameplaySystem.AI
         private Rigidbody2D rb;
         private PlayersLifeCycle playersLifeCycle;
 
-        private void Awake()
+        public Vector2 TargetDirection;
+
+
+        protected override void Awake()
         {
+            base.Awake();
             rb = GetComponent<Rigidbody2D>();
             playersLifeCycle = FindFirstObjectByType<PlayersLifeCycle>();
         }
@@ -32,6 +36,7 @@ namespace GameplaySystem.AI
         private void FixedUpdate()
         {
             Move();
+            enemyController.SetRendererFlip(TargetDirection.x < 0);
         }
 
         private void UpdateTarget()
@@ -47,6 +52,7 @@ namespace GameplaySystem.AI
             if (currentTarget != null)
             {
                 float distance = Vector2.Distance(transform.position, currentTarget.position);
+                
                 if (distance > giveUpDistance)
                 {
                     currentTarget = null;
@@ -58,6 +64,7 @@ namespace GameplaySystem.AI
                 currentTarget = FindClosestPlayer();
                 retargetTimer = retargetInterval;
             }
+            
         }
 
         private Transform FindClosestPlayer()
@@ -83,9 +90,8 @@ namespace GameplaySystem.AI
         private void Move()
         {
             if (currentTarget == null) return;
-
-            Vector2 direction = (currentTarget.position - transform.position).normalized;
-            rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+             TargetDirection = (currentTarget.position - transform.position).normalized;
+            rb.MovePosition(rb.position + TargetDirection * (moveSpeed * Time.fixedDeltaTime));
         }
     }
 }
