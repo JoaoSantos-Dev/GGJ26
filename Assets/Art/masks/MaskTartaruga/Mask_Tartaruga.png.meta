@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 48a14d77314a7d94e9743ab60c0a0ed4
+guid: 2e8ce47e8554e264ba4f47213b2fc8c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4668190860917249499
-    second: mascara tigre_0
+      213: -4413297520275318901
+    second: Mask_Tartaruga_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,45 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mascara tigre_0
+      name: Mask_Tartaruga_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 214
-        height: 125
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 52a6d472521473fb0800000000000000
-      internalID: -4668190860917249499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mascara tigre_1
-      rect:
-        serializedVersion: 2
-        x: 181
-        y: 62
-        width: 16
-        height: 2
+        width: 188
+        height: 133
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 36fe02899ae550441bae5efa72d8f12b
-      internalID: 299767836
+      spriteID: b8790e7b941d0c2c0800000000000000
+      internalID: -4413297520275318901
       vertices: []
       indices: 
       edges: []
@@ -160,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d3eb25fcf3f4ff942be97c9d42625abc
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -170,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mascara tigre_0: -4668190860917249499
-      mascara tigre_1: 299767836
+      Mask_Tartaruga_0: -4413297520275318901
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
