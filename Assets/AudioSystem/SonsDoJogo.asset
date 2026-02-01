@@ -21,11 +21,17 @@ MonoBehaviour:
   expirarMascara:
     arquivo: {fileID: 8300000, guid: dfb0519ee83490683bc83217401a3ba4, type: 3}
     volume: 0.5
+  tomarDano:
+    arquivo: {fileID: 8300000, guid: c7f0e7303f2f33a29a3b5a5d6c584bde, type: 3}
+    volume: 1
   passos:
   - arquivo: {fileID: 8300000, guid: 96b36f6a42685cff19bf8aaf0f281e01, type: 3}
     volume: 0.3
   passosAleatorios: 0
   indiceAtualPasso: 0
+  ondaDeInimigo:
+    arquivo: {fileID: 8300000, guid: cc690969f959fc71fa67efb3a2620321, type: 3}
+    volume: 1
   cliqueBotao:
     arquivo: {fileID: 0}
     volume: 1

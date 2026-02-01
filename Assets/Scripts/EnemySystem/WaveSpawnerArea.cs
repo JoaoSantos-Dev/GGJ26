@@ -15,7 +15,7 @@ namespace GameplaySystem.Spawning
         public bool EmIntervaloEntreHordas { get; private set; }
 
         private BoxCollider2D area;
-       [SerializeField]  private GameplayController gameplayController;
+        [SerializeField] private GameplayController gameplayController;
         private Coroutine spawnCoroutine;
         private void Awake()
         {
@@ -69,6 +69,14 @@ namespace GameplaySystem.Spawning
 
         private IEnumerator RunHorde(Wave horda)
         {
+            //Debug.Log($"Tocando som da horda fora do IF");
+            // --- JOÃO: SOM DE INÍCIO DE HORDA AQUI ---
+            if (AudioManager.Instance != null && AudioManager.Instance.listaDeSons != null)
+            {
+                //Debug.Log($"Tocando som da horda");
+                AudioManager.Instance.PlayEffect(AudioManager.Instance.listaDeSons.ondaDeInimigo, transform.position);
+            }
+            // -----------------------------------------
             int spawned = 0;
             while (spawned < horda.totalDeInimigos)
             {

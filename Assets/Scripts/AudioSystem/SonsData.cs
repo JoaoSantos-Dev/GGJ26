@@ -22,6 +22,9 @@ public class SonsData : ScriptableObject
 
     [HideInInspector] public int indiceAtualPasso = 0;
 
+    [Header("Sons de Level")]
+    public SomConfig ondaDeInimigo;
+
     [Header("Sons de UI")]
     public SomConfig cliqueBotao;
 }
