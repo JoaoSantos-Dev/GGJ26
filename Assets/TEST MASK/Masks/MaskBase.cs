@@ -7,6 +7,7 @@ public class MaskBase : MonoBehaviour
 {
     private SpriteRenderer pickingFeedback;
     public Sprite maskIcon {get; private set;}
+    public SpriteRenderer maskRenderer {get; private set;}
     [field: SerializeField] public float timeToGetMask { get; private set; } = 1f;
     [field:Space(20)]
     [field: SerializeField] public Sprite MaskSprite { get; private set; }
@@ -15,7 +16,7 @@ public class MaskBase : MonoBehaviour
 
     //For test purposes. Should come from the inventory settings.
     [field: SerializeField] public float DropRadius { get; private set; }
-    public Cooldown Cooldown { get; private set; }
+    public Cooldown UseHabilityCooldown { get; private set; }
     public Cooldown MaskDurationCountdown { get; private set; }
     public MaskType MaskType { get; protected set; }
     
@@ -28,14 +29,15 @@ public class MaskBase : MonoBehaviour
     protected virtual void Awake()
     {
         var spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
-        maskIcon = spriteRenderers[0].sprite;
+        maskRenderer = spriteRenderers[0];
+        maskIcon = maskRenderer.sprite;
         pickingFeedback = spriteRenderers[1];
         initialPickingScale = pickingFeedback.transform.localScale;
     }
 
     private void Start()
     {
-        Cooldown = new Cooldown();
+        UseHabilityCooldown = new Cooldown();
         MaskDurationCountdown = new Cooldown();
         StopPicking();
 
@@ -43,18 +45,20 @@ public class MaskBase : MonoBehaviour
 
     public virtual void UseMaskHability()
     {
-        if (!Cooldown.IsReady) return;
-        Cooldown.Start(HabilityCooldown);
+        if (!UseHabilityCooldown.IsReady) return;
+        UseHabilityCooldown.Start(HabilityCooldown);
         OnHabilityUsed?.Invoke();
     }
 
     public virtual void OnEquip(PlayerMovementHandler playerMovementHandler)
     {
         pickingFeedback.enabled = false;
+        Debug.Log("mask used");
         this.playerMovementHandler = playerMovementHandler;
         MaskDurationCountdown.Start(MaskDuration, () => OnDurationExpired?.Invoke());
         MaskSpawnManager.Instance.UntrackMask(this);
-        if (TryGetComponent(out Collider2D collider)) collider.enabled = false;
+        if (TryGetComponent(out Collider2D collider)) 
+            collider.enabled = false;
     }
 
     public virtual void OnUnequip()

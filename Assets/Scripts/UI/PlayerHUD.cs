@@ -9,14 +9,17 @@ namespace UI
 {
     public class PlayerHUD : MonoBehaviour
     {
+        [SerializeField] private Image image_MaskIconBG;
         [SerializeField] private Image image_MaskIcon;
         [SerializeField] private Image image_healthBarBG;
         [SerializeField] private Image image_maskDurationBG;
         [SerializeField] private Image image_healthBar;
+        [SerializeField] private Image image_maskDuration;
         private int maxHealth;
         private PlayerController playerController;
         private Material material;
         private static int oultlineColorPropertyID = Shader.PropertyToID("_SolidOutline");
+        private MaskBase maskBase;
         private void Awake()
         {
             image_healthBar.fillAmount = 0;
@@ -24,14 +27,15 @@ namespace UI
 
         private void Start()
         {
-            HideMaskIcon();
+            ResetMaskConfig();
         }
 
         private void OnDestroy()
         {
             playerController.HealthChanged -= OnHealthChange;
-            playerController.InventoryController.MaskEquiped -= ShowMaskEquiped;
-            playerController.InventoryController.MaskUnequiped -= HideMaskIcon;
+            playerController.InventoryController.MaskEquiped -= OnMaskEquiped;
+            playerController.InventoryController.MaskUnequiped -= OnMaskUnequiped;
+
         }
         
 
@@ -43,9 +47,11 @@ namespace UI
             SetImageOutlineColor(this.playerController);
             maxHealth = playerController.Health;
             playerController.HealthChanged += OnHealthChange;
-            playerController.InventoryController.MaskEquiped += ShowMaskEquiped;
-            playerController.InventoryController.MaskUnequiped += HideMaskIcon;
+            playerController.InventoryController.MaskEquiped += OnMaskEquiped;
+            playerController.InventoryController.MaskUnequiped += OnMaskUnequiped;
+
         }
+
 
 
         private void OnHealthChange(int health)
@@ -65,19 +71,47 @@ namespace UI
         }
         
         
-        private void ShowMaskEquiped(MaskBase mask)
+        private void OnMaskEquiped(MaskBase mask)
         {
+            image_MaskIconBG.sprite = mask.maskIcon;
+            image_MaskIconBG.enabled = true;
             image_MaskIcon.sprite = mask.maskIcon;
             image_MaskIcon.enabled = true;
-            Debug.Log("Equiped mask UI");
-        }
+            maskBase = mask;
+            mask.MaskDurationCountdown.Updated += OnCooldowMaskUpdated;
+            mask.UseHabilityCooldown.Updated += OnHabilityCooldownUpdate;
 
-        private void HideMaskIcon()
-        {
-            image_MaskIcon.sprite = null;
-            image_MaskIcon.enabled = false;
+
         }
         
+        private void OnMaskUnequiped(MaskBase mask)
+        {
+            ResetMaskConfig();
+            mask.MaskDurationCountdown.Updated -= OnCooldowMaskUpdated;
+            mask.UseHabilityCooldown.Updated -= OnHabilityCooldownUpdate;
+
+        }
+
+        private void ResetMaskConfig()
+        {
+            image_MaskIconBG.sprite = null;
+            image_MaskIconBG.enabled = false;
+            image_MaskIcon.sprite = null;
+            image_MaskIcon.enabled = false;
+            maskBase = null;
+        }
+        
+        private void OnCooldowMaskUpdated(float remeiningTime)
+        {
+            image_maskDuration.fillAmount =  remeiningTime / maskBase.MaskDurationCountdown.Duration;
+        }
+        
+        private void OnHabilityCooldownUpdate(float value)
+        {
+            image_MaskIcon.fillAmount = 1- value / maskBase.UseHabilityCooldown.Duration;
+        }
+
+
         
     }
 }

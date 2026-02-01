@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerInventoryController 
 {
     public MaskBase EquipedMask { get; private set; }
-    public bool CanUseMaskHability => EquipedMask != null && EquipedMask.Cooldown.IsReady;
+    public bool CanUseMaskHability => EquipedMask != null && EquipedMask.UseHabilityCooldown.IsReady;
 
     private PlayerMovementHandler playerMovementHandler;
 
@@ -14,7 +14,7 @@ public class PlayerInventoryController
     private Cooldown equipMaskCountdown;
     private readonly SpriteRenderer maskRenderer;
     public event Action<MaskBase> MaskEquiped;
-    public event Action MaskUnequiped;
+    public event Action<MaskBase> MaskUnequiped;
     public PlayerInventoryController(SpriteRenderer maskRenderer, PlayerMovementHandler playerMovementHandler)
     {
         this.maskRenderer = maskRenderer;
@@ -31,25 +31,25 @@ public class PlayerInventoryController
 
     public void UnequipMask()
     {
+        MaskUnequiped?.Invoke(EquipedMask);
         EquipedMask.MaskDurationCountdown.Pause();
         EquipedMask.OnDurationExpired -= OnMaskExpired;
         EquipedMask.OnUnequip();
         EquipedMask = null;
         maskRenderer.sprite = null;
-        MaskUnequiped?.Invoke();
     }
 
     private void EquipNewMask(MaskBase mask)
     {
         UnityEngine.Debug.Log("Equiping mask");
-        MaskEquiped?.Invoke(mask);
-        mask.transform.SetParent(playerMovementHandler.EntityTransform, false);
-        mask.transform.localPosition = UnityEngine.Vector3.zero;
-        mask.gameObject.SetActive(false);
         maskRenderer.sprite = mask.MaskSprite;
         maskRenderer.enabled = true;
+        mask.transform.localPosition = Vector3.zero;
+        mask.OnDurationExpired += OnMaskExpired;
+        mask.transform.SetParent(playerMovementHandler.EntityTransform, false);
+        mask.maskRenderer.enabled = (false);
         EquipedMask = mask;
-        EquipedMask.OnDurationExpired += OnMaskExpired;
+        MaskEquiped?.Invoke(mask);
         EquipedMask.OnEquip(playerMovementHandler);
         
     }
