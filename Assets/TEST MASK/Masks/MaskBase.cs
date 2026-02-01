@@ -5,6 +5,9 @@ using UnityEngine;
 public enum MaskType { Dash, Shield, Teleport, Push }
 public class MaskBase : MonoBehaviour
 {
+    private SpriteRenderer pickingFeedback;
+    public Sprite maskIcon {get; private set;}
+    [SerializeField] public float timeToGetMask { get; private set; } = 1f;
     [field: SerializeField] public Sprite MaskSprite { get; private set; }
     [field: SerializeField] public float MaskDuration { get; private set; }
     [field: SerializeField] public float HabilityCooldown { get; private set; }
@@ -14,17 +17,27 @@ public class MaskBase : MonoBehaviour
     public Cooldown Cooldown { get; private set; }
     public Cooldown MaskDurationCountdown { get; private set; }
     public MaskType MaskType { get; protected set; }
-
+    
     public event Action OnHabilityUsed;
     public event Action OnDurationExpired;
     public virtual event Action OnHabilityEnd;
 
     protected PlayerMovementHandler playerMovementHandler;
 
+    protected virtual void Awake()
+    {
+        var spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        maskIcon = spriteRenderers[0].sprite;
+        pickingFeedback = spriteRenderers[1];
+        initialPickingScale = pickingFeedback.transform.localScale;
+    }
+
     private void Start()
     {
         Cooldown = new Cooldown();
         MaskDurationCountdown = new Cooldown();
+        StopPicking();
+
     }
 
     public virtual void UseMaskHability()
@@ -36,6 +49,7 @@ public class MaskBase : MonoBehaviour
 
     public virtual void OnEquip(PlayerMovementHandler playerMovementHandler)
     {
+        pickingFeedback.enabled = false;
         this.playerMovementHandler = playerMovementHandler;
         MaskDurationCountdown.Start(MaskDuration, () => OnDurationExpired?.Invoke());
         MaskSpawnManager.Instance.UntrackMask(this);
@@ -64,11 +78,31 @@ public class MaskBase : MonoBehaviour
         {
             completed?.Invoke();
         });
+        
     }
 
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+
+    Tween pickingFeedbackTween;
+    private Vector3 initialPickingScale;
+
+    public void StopPicking()
+    {
+        pickingFeedbackTween.Kill();
+        pickingFeedback.transform.localScale = Vector3.zero;
+        pickingFeedback.enabled = false;
+    }
+    public void StartPicking()
+    {
+        pickingFeedbackTween.Kill();
+        pickingFeedback.enabled = true;
+        pickingFeedbackTween = pickingFeedback.transform.DOScale(
+            initialPickingScale, 
+            timeToGetMask)
+            .SetEase(Ease.OutQuad);
     }
 
 }

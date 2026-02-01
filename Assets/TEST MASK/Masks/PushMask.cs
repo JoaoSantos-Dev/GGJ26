@@ -12,8 +12,9 @@ public class PushMask : MaskBase
     private SpriteRenderer spriteRenderer;
     public override event Action OnHabilityEnd;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         MaskType = MaskType.Push;
     }
     public override void UseMaskHability()

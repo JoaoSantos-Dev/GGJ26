@@ -15,8 +15,9 @@ public class ShieldMask : MaskBase
 
     public override event Action OnHabilityEnd;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         MaskType = MaskType.Shield;
     }
     public override void UseMaskHability()

@@ -1,4 +1,6 @@
 
+using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerInventoryController 
@@ -10,10 +12,12 @@ public class PlayerInventoryController
 
     //Adjust here to get (from elsewhere on the player settings/configs) to get the default time for equipping a mask
     private Cooldown equipMaskCountdown;
-   
-
-    public PlayerInventoryController(PlayerMovementHandler playerMovementHandler)
+    private readonly SpriteRenderer maskRenderer;
+    public event Action<MaskBase> MaskEquiped;
+    public event Action MaskUnequiped;
+    public PlayerInventoryController(SpriteRenderer maskRenderer, PlayerMovementHandler playerMovementHandler)
     {
+        this.maskRenderer = maskRenderer;
         this.playerMovementHandler = playerMovementHandler;
         equipMaskCountdown = new Cooldown();
     }
@@ -22,6 +26,7 @@ public class PlayerInventoryController
     {
         if (EquipedMask != null) UnequipMask();
         EquipNewMask(mask);
+        
     }
 
     public void UnequipMask()
@@ -30,6 +35,8 @@ public class PlayerInventoryController
         EquipedMask.OnDurationExpired -= OnMaskExpired;
         EquipedMask.OnUnequip();
         EquipedMask = null;
+        maskRenderer.sprite = null;
+        MaskUnequiped?.Invoke();
     }
 
     private void EquipNewMask(MaskBase mask)
@@ -37,9 +44,14 @@ public class PlayerInventoryController
         UnityEngine.Debug.Log("Equiping mask");
         mask.transform.SetParent(playerMovementHandler.EntityTransform, false);
         mask.transform.localPosition = UnityEngine.Vector3.zero;
+        mask.gameObject.SetActive(false);
+        maskRenderer.sprite = mask.MaskSprite;
+        maskRenderer.enabled = true;
         EquipedMask = mask;
         EquipedMask.OnDurationExpired += OnMaskExpired;
         EquipedMask.OnEquip(playerMovementHandler);
+        MaskEquiped?.Invoke(mask);
+        
     }
 
     private void OnMaskExpired()
@@ -47,12 +59,15 @@ public class PlayerInventoryController
         EquipedMask.OnDurationExpired -= OnMaskExpired;
         EquipedMask.Destroy();
         EquipedMask = null;
+        maskRenderer.sprite = null;
+        
     }
 
     public void TryGetNewMask(MaskBase mask)
     {
         UnityEngine.Debug.Log("Trying to get new mask");
-        equipMaskCountdown.Start(2f/*Time to equip mask. Must be configured from the player settings or other place.*/, () => EquipMask(mask));
+        equipMaskCountdown.Start(mask.timeToGetMask/*Time to equip mask. Must be configured from the player settings or other place.*/, () => EquipMask(mask));
+        mask.StartPicking();
     }
 
     public void ResetEquipCooldown()

@@ -7,8 +7,9 @@ public class DashMask : MaskBase
     [SerializeField] private float dashSpeed = 0.1f;
     public override event Action OnHabilityEnd;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         MaskType = MaskType.Dash;
     }
     public override void UseMaskHability()

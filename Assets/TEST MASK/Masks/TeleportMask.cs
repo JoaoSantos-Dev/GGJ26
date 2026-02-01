@@ -11,8 +11,9 @@ public class TeleportMask : MaskBase
 
     public override event System.Action OnHabilityEnd;
 
-    private void Awake()
+    protected virtual void Awake()
     {
+        base.Awake();
         MaskType = MaskType.Teleport;
     }
     public override void UseMaskHability()

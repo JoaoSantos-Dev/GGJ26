@@ -45,6 +45,7 @@ public class PlayerController : EntityBase, IDamageable
      public Rigidbody2D Rigidbody2D { get; private set; }
     public event Action<int> HealthChanged;
     public event Action<PlayerController> Death;
+    
     private void Awake()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -56,7 +57,7 @@ public class PlayerController : EntityBase, IDamageable
             Rigidbody2D,
             playerDefaultSpeed, 
             () => inputController.MovementDirection);
-        InventoryController = new PlayerInventoryController(MovementHandler as PlayerMovementHandler);
+        InventoryController = new PlayerInventoryController(maskRenderer, MovementHandler as PlayerMovementHandler);
         StateMachine = new PlayerStateMachine(inputController, InventoryController,
             MovementHandler as PlayerMovementHandler, this);
     }
@@ -93,6 +94,7 @@ public class PlayerController : EntityBase, IDamageable
         if (collision.TryGetComponent(out MaskBase mask))
         {
             InventoryController.ResetEquipCooldown();
+            mask.StopPicking();
         }
     }
 

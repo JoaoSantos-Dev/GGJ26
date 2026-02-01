@@ -17,12 +17,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2505555930961692661, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2810924426500988677, guid: b54d2f0813eaac0499e2919f82c9bb5a, type: 3}
+    - target: {fileID: 2505555930961692661, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2505555930961692661, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_Color.g
-      value: 0.8878671
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505555930961692661, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505555930961692661, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1156580095
       objectReference: {fileID: 0}
     - target: {fileID: 4136885043991760891, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_Name
@@ -30,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.04168
+      value: -2.31
       objectReference: {fileID: 0}
     - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.87
+      value: -7.76
       objectReference: {fileID: 0}
     - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_LocalPosition.z
@@ -93,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f93bf375279c8645a970d41e38d33ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportMask
-  <MaskSprite>k__BackingField: {fileID: 0}
+  <MaskSprite>k__BackingField: {fileID: -7445013535228688498, guid: 632ff43018bb72f499d120e97922072e, type: 3}
   <MaskDuration>k__BackingField: 7
   <HabilityCooldown>k__BackingField: 2
   <DropRadius>k__BackingField: 5
