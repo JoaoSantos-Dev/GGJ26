@@ -38,7 +38,7 @@ public class PlayerController : EntityBase, IDamageable
     [SerializeField] private float playerDefaultSpeed;
     private PlayerInputController inputController;
     private int maxHealth;
-    private PlayerInput playerInput;
+    [field: SerializeField] public PlayerInput PlayerInput { get; private set; } 
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerInventoryController InventoryController { get; private set; }
     public AnimationController AnimationController {get; private set;}
@@ -53,7 +53,7 @@ public class PlayerController : EntityBase, IDamageable
         animator = GetComponentInChildren<Animator>();
         AnimationController = new AnimationController(characterRenderer, maskRenderer, headRenderer, animator);
         maxHealth = Health;
-        inputController = new PlayerInputController(GetComponent<PlayerInput>());
+        inputController = new PlayerInputController(PlayerInput);
         MovementHandler = new PlayerMovementHandler(transform, 
             Rigidbody2D,
             playerDefaultSpeed, 
@@ -148,4 +148,5 @@ public class PlayerController : EntityBase, IDamageable
         if(baseSpriteRenderer != null) baseSpriteRenderer.color = VisualConfig.Color;
 
     }
+
 }

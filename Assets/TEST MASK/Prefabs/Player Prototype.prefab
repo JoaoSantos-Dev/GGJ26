@@ -361,8 +361,9 @@ MonoBehaviour:
   characterRenderer: {fileID: 8471155906965197467}
   headRenderer: {fileID: 8826602809062583696}
   maskRenderer: {fileID: 5610174226418416084}
-  <Health>k__BackingField: 100
+  <Health>k__BackingField: 25
   playerDefaultSpeed: 300
+  <PlayerInput>k__BackingField: {fileID: 2166248355441508229}
 --- !u!50 &2587574203023481042
 Rigidbody2D:
   serializedVersion: 5

@@ -9,7 +9,7 @@ namespace GameplaySystem
 {
     public class PlayersLifeCycle : MonoBehaviour
     {
-        [FormerlySerializedAs("playerSessionData")] [SerializeField] private GameSessionSO gameSessionData;
+        [SerializeField] private GameSessionSO gameSessionData;
         [SerializeField] PlayerInputManager playerInputManager;
         public List<PlayerController> Players { get; private set; } = new();
 
@@ -71,6 +71,16 @@ namespace GameplaySystem
             var color = gameSessionData.playerDatas[PlayerCount - 1].Color;
             var headSprite = gameSessionData.characterSprites.GetRandomHeadSprite();
             playerController.SetVisual(headSprite,color);
+        }
+
+        public void SetPlayerInputState(bool value)
+        {
+            
+            foreach (var player in Players)
+            {
+                if (value) player.PlayerInput.ActivateInput();
+                else player.PlayerInput.DeactivateInput();
+            }
         }
 
     }

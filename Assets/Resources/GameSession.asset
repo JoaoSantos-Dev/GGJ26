@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91200f07bf6391428c39039270977b3, type: 3}
   m_Name: GameSession
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSessionSO
-  <MaxPlayer>k__BackingField: 1
+  <MaxPlayer>k__BackingField: 2
   <playerDatas>k__BackingField:
   - {fileID: 11400000, guid: c957644dec198da4982c5d8e7ea0d02f, type: 2}
   - {fileID: 11400000, guid: 744031166400c65439bcf57f043f08a0, type: 2}
