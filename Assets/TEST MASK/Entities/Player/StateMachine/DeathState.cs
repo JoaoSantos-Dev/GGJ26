@@ -13,10 +13,12 @@ public class DeathState : PlayerState
     public override void OnStateEnter()
     {
         StartDeathBehaviour();
+        playerController.Rigidbody2D.simulated = false;
     }
 
     public override void OnStateExit()
     {
+        playerController.Rigidbody2D.simulated = true;
     }
 
     public override void FixedUpdate()
