@@ -22,6 +22,7 @@ namespace UI
         {
             UiInitialization.SetState(true);
             UiGameOver?.SetState(false);
+            text_321_go.enabled = false;
         }
 
         private void OnEnable()
@@ -53,7 +54,7 @@ namespace UI
         public async Task Start321GoEvent()
         {
             text_321_go.enabled = true;
-            for (int i = 1; i <= 3; i++)
+            for (int i = 3; i > 0; i--)
             {
                 text_321_go.SetText(i.ToString());
                 text_321_go.transform.DOScale(Vector2.one * 2,1).SetEase(Ease.OutCubic);
