@@ -22,10 +22,18 @@ namespace UI
             image_healthBar.fillAmount = 0;
         }
 
+        private void Start()
+        {
+            HideMaskIcon();
+        }
+
         private void OnDestroy()
         {
             playerController.HealthChanged -= OnHealthChange;
+            playerController.InventoryController.MaskEquiped -= ShowMaskEquiped;
+            playerController.InventoryController.MaskUnequiped -= HideMaskIcon;
         }
+        
 
         public async void Initialize(PlayerController playerController)
         {
@@ -35,7 +43,10 @@ namespace UI
             SetImageOutlineColor(this.playerController);
             maxHealth = playerController.Health;
             playerController.HealthChanged += OnHealthChange;
+            playerController.InventoryController.MaskEquiped += ShowMaskEquiped;
+            playerController.InventoryController.MaskUnequiped += HideMaskIcon;
         }
+
 
         private void OnHealthChange(int health)
         {
@@ -51,8 +62,22 @@ namespace UI
             
             var maskMaterial = image_MaskIcon.material;
             maskMaterial.SetColor(oultlineColorPropertyID, player.VisualConfig.Color);
-
-
         }
+        
+        
+        private void ShowMaskEquiped(MaskBase mask)
+        {
+            image_MaskIcon.sprite = mask.maskIcon;
+            image_MaskIcon.enabled = true;
+            Debug.Log("Equiped mask UI");
+        }
+
+        private void HideMaskIcon()
+        {
+            image_MaskIcon.sprite = null;
+            image_MaskIcon.enabled = false;
+        }
+        
+        
     }
 }

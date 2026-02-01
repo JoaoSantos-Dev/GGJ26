@@ -7,7 +7,8 @@ public class MaskBase : MonoBehaviour
 {
     private SpriteRenderer pickingFeedback;
     public Sprite maskIcon {get; private set;}
-    [SerializeField] public float timeToGetMask { get; private set; } = 1f;
+    [field: SerializeField] public float timeToGetMask { get; private set; } = 1f;
+    [field:Space(20)]
     [field: SerializeField] public Sprite MaskSprite { get; private set; }
     [field: SerializeField] public float MaskDuration { get; private set; }
     [field: SerializeField] public float HabilityCooldown { get; private set; }

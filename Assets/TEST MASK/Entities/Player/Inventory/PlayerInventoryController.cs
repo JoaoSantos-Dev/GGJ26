@@ -42,6 +42,7 @@ public class PlayerInventoryController
     private void EquipNewMask(MaskBase mask)
     {
         UnityEngine.Debug.Log("Equiping mask");
+        MaskEquiped?.Invoke(mask);
         mask.transform.SetParent(playerMovementHandler.EntityTransform, false);
         mask.transform.localPosition = UnityEngine.Vector3.zero;
         mask.gameObject.SetActive(false);
@@ -50,7 +51,6 @@ public class PlayerInventoryController
         EquipedMask = mask;
         EquipedMask.OnDurationExpired += OnMaskExpired;
         EquipedMask.OnEquip(playerMovementHandler);
-        MaskEquiped?.Invoke(mask);
         
     }
 

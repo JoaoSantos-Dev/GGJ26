@@ -27,6 +27,7 @@ public class PlayerController : EntityBase, IDamageable
     public CharacterData VisualConfig { get; set; }
     [field: SerializeField] public CharacterSpritesSO CharacterSprites { get; private set; }
     private Animator animator;
+    [SerializeField] private SpriteRenderer baseSpriteRenderer;
     [SerializeField] private SpriteRenderer characterRenderer;
     [SerializeField] private SpriteRenderer headRenderer;
     [SerializeField] private SpriteRenderer maskRenderer;
@@ -129,8 +130,8 @@ public class PlayerController : EntityBase, IDamageable
         headRenderer.sprite = CharacterSprites.HitFace;
         headRenderer.color = Color.red;
         characterRenderer.color = Color.red;
-        characterRenderer.DOColor(VisualConfig.Color, 0.3f);
-        headRenderer.DOColor(VisualConfig.Color, 0.3f);
+        characterRenderer.DOColor(Color.white, 0.3f);
+        headRenderer.DOColor(Color.white, 0.3f);
         
         await UniTask.Delay(300);
         headRenderer.sprite = VisualConfig.HeadSprite;
@@ -144,8 +145,7 @@ public class PlayerController : EntityBase, IDamageable
     {
         VisualConfig = new(head, color);
         headRenderer.sprite = VisualConfig.HeadSprite;
-        headRenderer.color = VisualConfig.Color;
-        characterRenderer.color = VisualConfig.Color;
-        
+        if(baseSpriteRenderer != null) baseSpriteRenderer.color = VisualConfig.Color;
+
     }
 }
