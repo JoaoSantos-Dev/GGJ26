@@ -40,6 +40,7 @@ public class EnemyController : EntityBase
             if(other.TryGetComponent(out PlayerController player))
             {
                 player.TakeDamage(damage);
+                SelfDestroy();
             }
         }
     }
@@ -79,5 +80,10 @@ public class EnemyController : EntityBase
         animationTween.Kill();
         transform.localScale = initialScale;
         animationTween = transform.DOScaleX(value, duration).SetEase(Ease.InOutQuad);
+    }
+
+    public void SelfDestroy()
+    {
+        Destroy(gameObject);
     }
 }

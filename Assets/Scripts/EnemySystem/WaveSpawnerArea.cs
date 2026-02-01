@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using System.Collections;
+using Random = UnityEngine.Random;
 
 namespace GameplaySystem.Spawning
 {
@@ -13,7 +15,8 @@ namespace GameplaySystem.Spawning
         public bool EmIntervaloEntreHordas { get; private set; }
 
         private BoxCollider2D area;
-
+       [SerializeField]  private GameplayController gameplayController;
+        private Coroutine spawnCoroutine;
         private void Awake()
         {
             area = GetComponent<BoxCollider2D>();
@@ -22,8 +25,27 @@ namespace GameplaySystem.Spawning
 
         private void Start()
         {
+            gameplayController.GameStart += OnGameStart;
+            gameplayController.GameOver += OnGameOver;
+        }
+
+
+        private void OnDestroy()
+        {
+            gameplayController.GameStart -= OnGameStart;
+            gameplayController.GameOver -= OnGameOver;
+        }
+
+        private void OnGameStart()
+        {
             if (config != null && config.hordas.Count > 0)
-                StartCoroutine(RotineOfSpawn());
+            {
+                spawnCoroutine = StartCoroutine(RotineOfSpawn());
+            }
+        }
+        private void OnGameOver()
+        {
+            StopAllCoroutines();
         }
 
         private IEnumerator RotineOfSpawn()
