@@ -32,7 +32,8 @@ public class DeathState : PlayerState
 
     private async void StartDeathBehaviour()
     {
-       await UniTask.Delay(1000);
+        Debug.Log("Player death");
+       await UniTask.Delay(500);
        playerController.Destroy();
     }
     

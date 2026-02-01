@@ -104,7 +104,7 @@ public class PlayerController : EntityBase, IDamageable
         Health -= Mathf.Clamp(damage, 0, maxHealth);
         HealthChanged?.Invoke(Health);
         ApplyHitEffect();
-        if (Health == 0) Death?.Invoke(this);
+        if (Health <= 0) Death?.Invoke(this);
         
     }
 
