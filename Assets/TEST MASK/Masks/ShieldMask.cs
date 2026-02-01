@@ -24,6 +24,14 @@ public class ShieldMask : MaskBase
     {
         base.UseMaskHability();
 
+        // --- JOÃO: SOM DE DASH AQUI ---
+        if (AudioManager.Instance != null && AudioManager.Instance.listaDeSons != null)
+        {
+            // Toca o som de Dash na posição atual do jogador
+            AudioManager.Instance.PlayEffect(AudioManager.Instance.listaDeSons.maskShield, transform.position);
+        }
+        // ------------------------------
+
         if (collider == null) collider = gameObject.AddComponent<CircleCollider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 

@@ -24,6 +24,18 @@ MonoBehaviour:
   tomarDano:
     arquivo: {fileID: 8300000, guid: c7f0e7303f2f33a29a3b5a5d6c584bde, type: 3}
     volume: 1
+  maskDash:
+    arquivo: {fileID: 8300000, guid: 95c4db5ceb626c6bfb28a889c95f5422, type: 3}
+    volume: 0.8
+  maskPush:
+    arquivo: {fileID: 8300000, guid: 0cacf6c8a076eb7eabcfcb73b76dd235, type: 3}
+    volume: 0.8
+  maskShield:
+    arquivo: {fileID: 8300000, guid: 77f6058ca407569da8e5b535b08e108f, type: 3}
+    volume: 0.8
+  maskTeleport:
+    arquivo: {fileID: 8300000, guid: 2f1f1648162f7236b8d66b822c864932, type: 3}
+    volume: 0.8
   passos:
   - arquivo: {fileID: 8300000, guid: 96b36f6a42685cff19bf8aaf0f281e01, type: 3}
     volume: 0.3

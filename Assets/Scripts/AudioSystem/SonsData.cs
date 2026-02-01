@@ -16,6 +16,13 @@ public class SonsData : ScriptableObject
     public SomConfig expirarMascara;
     public SomConfig tomarDano;
 
+    [Header("Sons de Mascaras")]
+    public SomConfig maskDash;
+    public SomConfig maskPush;
+    public SomConfig maskShield;
+    public SomConfig maskTeleport;
+
+
     [Header("Configuração de Passos")]
     public SomConfig[] passos; // Cada passo pode ter seu volume individual!
     public bool passosAleatorios = true;
