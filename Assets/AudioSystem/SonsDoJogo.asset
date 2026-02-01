@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b79764046b991a683ac337d0a035b0, type: 3}
+  m_Name: SonsDoJogo
+  m_EditorClassIdentifier: Assembly-CSharp::SonsData
+  vestirMascara:
+    arquivo: {fileID: 8300000, guid: 95c4db5ceb626c6bfb28a889c95f5422, type: 3}
+    volume: 1
+  trocarMascara:
+    arquivo: {fileID: 0}
+    volume: 1
+  expirarMascara:
+    arquivo: {fileID: 0}
+    volume: 1
+  passos:
+  - arquivo: {fileID: 8300000, guid: 96b36f6a42685cff19bf8aaf0f281e01, type: 3}
+    volume: 0.5
+  passosAleatorios: 0
+  indiceAtualPasso: 0
+  cliqueBotao:
+    arquivo: {fileID: 0}
+    volume: 1

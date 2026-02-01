@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerInventoryController 
+public class PlayerInventoryController
 {
     public MaskBase EquipedMask { get; private set; }
     public bool CanUseMaskHability => EquipedMask != null && EquipedMask.UseHabilityCooldown.IsReady;
@@ -26,7 +26,7 @@ public class PlayerInventoryController
     {
         if (EquipedMask != null) UnequipMask();
         EquipNewMask(mask);
-        
+
     }
 
     public void UnequipMask()
@@ -49,18 +49,41 @@ public class PlayerInventoryController
         mask.transform.SetParent(playerMovementHandler.EntityTransform, false);
         mask.maskRenderer.enabled = (false);
         EquipedMask = mask;
+
+        //João adicionou o try pro som de equipar máscara aqui
+        try
+        {
+            if (AudioManager.Instance != null)
+            {
+                Debug.Log("Chamando PlayEffect do Manager...");
+                AudioManager.Instance.PlayEffect(AudioManager.Instance.listaDeSons.vestirMascara, playerMovementHandler.EntityTransform.position);
+            }
+        }
+        catch (System.Exception e)
+        {
+            UnityEngine.Debug.LogWarning("Erro ao tocar som de máscara: " + e.Message);
+        }
+        //Coloquei aqui no meio pois o código trava na linha de baixo, não tive tempo de verificar o porque
+        //Pode ser erro ou uma chamada diferente, talvez não implementada?
+
         MaskEquiped?.Invoke(mask);
         EquipedMask.OnEquip(playerMovementHandler);
-        
+
     }
 
     private void OnMaskExpired()
     {
+        //João adicionou o try pro som de expirar máscara aqui
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayEffect(AudioManager.Instance.listaDeSons.expirarMascara, playerMovementHandler.EntityTransform.position);
+        }
+
         EquipedMask.OnDurationExpired -= OnMaskExpired;
         EquipedMask.Destroy();
         EquipedMask = null;
         maskRenderer.sprite = null;
-        
+
     }
 
     public void TryGetNewMask(MaskBase mask)

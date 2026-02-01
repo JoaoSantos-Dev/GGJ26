@@ -17,9 +17,9 @@ public class CharacterData
     {
         this.Color = color;
         this.HeadSprite = sprite;
-        
+
     }
-    
+
 }
 
 public class PlayerController : EntityBase, IDamageable
@@ -41,22 +41,33 @@ public class PlayerController : EntityBase, IDamageable
     private PlayerInput playerInput;
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerInventoryController InventoryController { get; private set; }
-    public AnimationController AnimationController {get; private set;}
-    
-     public Rigidbody2D Rigidbody2D { get; private set; }
+    public AnimationController AnimationController { get; private set; }
+
+    public Rigidbody2D Rigidbody2D { get; private set; }
     public event Action<int> HealthChanged;
     public event Action<PlayerController> Death;
-    
+
     private void Awake()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+
+        // --- JOÃO: ADICIONEI ESTE BLOCO AQUI ---
+        if (animator != null)
+        {
+            // Isso anexa o script de áudio diretamente no objeto que tem o Animator
+            if (animator.gameObject.GetComponent<AnimationAudioRelay>() == null)
+            {
+                animator.gameObject.AddComponent<AnimationAudioRelay>();
+            }
+        }
+
         AnimationController = new AnimationController(characterRenderer, maskRenderer, headRenderer, animator);
         maxHealth = Health;
         inputController = new PlayerInputController(GetComponent<PlayerInput>());
-        MovementHandler = new PlayerMovementHandler(transform, 
+        MovementHandler = new PlayerMovementHandler(transform,
             Rigidbody2D,
-            playerDefaultSpeed, 
+            playerDefaultSpeed,
             () => inputController.MovementDirection);
         InventoryController = new PlayerInventoryController(maskRenderer, MovementHandler as PlayerMovementHandler);
         StateMachine = new PlayerStateMachine(inputController, InventoryController,
@@ -85,7 +96,7 @@ public class PlayerController : EntityBase, IDamageable
             mask class that creates an effect collider to calculate an offset based on the boundries of the player's collider */
 
             //DestroyChildren();
-           
+
             InventoryController.TryGetNewMask(mask);
         }
     }
@@ -105,7 +116,7 @@ public class PlayerController : EntityBase, IDamageable
         HealthChanged?.Invoke(Health);
         ApplyHitEffect();
         if (Health == 0) Death?.Invoke(this);
-        
+
     }
 
     //Created only for test purposes.
@@ -121,18 +132,18 @@ public class PlayerController : EntityBase, IDamageable
 
     private static readonly Vector3 hitMaskLocalPosition = new Vector3(-.5f, 4.2f, 0.5f);
     private static readonly Vector3 hitMaskLocalRotation = new Vector3(55, 8, 4);
-    
+
     public async void ApplyHitEffect()
     {
         maskRenderer.transform.localPosition = hitMaskLocalPosition;
         maskRenderer.transform.rotation = Quaternion.Euler(hitMaskLocalRotation);
-        
+
         headRenderer.sprite = CharacterSprites.HitFace;
         headRenderer.color = Color.red;
         characterRenderer.color = Color.red;
         characterRenderer.DOColor(Color.white, 0.3f);
         headRenderer.DOColor(Color.white, 0.3f);
-        
+
         await UniTask.Delay(300);
         headRenderer.sprite = VisualConfig.HeadSprite;
         maskRenderer.transform.localPosition = Vector3.up * 2;
@@ -145,7 +156,7 @@ public class PlayerController : EntityBase, IDamageable
     {
         VisualConfig = new(head, color);
         headRenderer.sprite = VisualConfig.HeadSprite;
-        if(baseSpriteRenderer != null) baseSpriteRenderer.color = VisualConfig.Color;
+        if (baseSpriteRenderer != null) baseSpriteRenderer.color = VisualConfig.Color;
 
     }
 }

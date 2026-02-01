@@ -1119,6 +1119,53 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 9167201408331919208, guid: 97623a86b206cfa4382cc76da84f54bc, type: 3}
   m_PrefabInstance: {fileID: 6997510683741195564}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1000159755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000159757}
+  - component: {fileID: 1000159756}
+  m_Layer: 0
+  m_Name: AudioManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1000159756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000159755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1170cc726a6fc89da6df25c6f4bd068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  listaDeSons: {fileID: 11400000, guid: 49b8f06ec2e1324eab9811b60045eee3, type: 2}
+  audioSourcePrefab: {fileID: 2147766457063469103, guid: adfa9a3da1280875380af65334a6a95e, type: 3}
+  poolSize: 10
+--- !u!4 &1000159757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000159755}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1098670809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1267,7 @@ GameObject:
   - component: {fileID: 1100510499}
   - component: {fileID: 1100510500}
   m_Layer: 0
-  m_Name: ======= ENEMY SPAWNER ======
+  m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2644,6 +2691,8 @@ SceneRoots:
   - {fileID: 4623990177983471310}
   - {fileID: 6997510683741195564}
   - {fileID: 371752962}
+  - {fileID: 1100510498}
+  - {fileID: 1000159757}
   - {fileID: 802524307}
   - {fileID: 2307207194472656569}
   - {fileID: 8014592254341642844}
@@ -2651,7 +2700,6 @@ SceneRoots:
   - {fileID: 1721372552}
   - {fileID: 498659478}
   - {fileID: 1154555120}
-  - {fileID: 1100510498}
   - {fileID: 1600352824}
   - {fileID: 1324653017}
   - {fileID: 377371526}
