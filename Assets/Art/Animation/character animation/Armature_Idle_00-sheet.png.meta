@@ -1,0 +1,418 @@
+fileFormatVersion: 2
+guid: 028a10a4a56dbeb4b9883ee949be533a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2128742090428854679
+    second: Armature_Idle_00-sheet_0
+  - first:
+      213: 1106607163396609826
+    second: Armature_Idle_00-sheet_1
+  - first:
+      213: 6753268021502664038
+    second: Armature_Idle_00-sheet_2
+  - first:
+      213: 4579328948671488007
+    second: Armature_Idle_00-sheet_3
+  - first:
+      213: 4657814795000110030
+    second: Armature_Idle_00-sheet_4
+  - first:
+      213: 5989629433340828809
+    second: Armature_Idle_00-sheet_5
+  - first:
+      213: -652019906514090600
+    second: Armature_Idle_00-sheet_6
+  - first:
+      213: -322960912480991962
+    second: Armature_Idle_00-sheet_7
+  - first:
+      213: 5915476242254281699
+    second: Armature_Idle_00-sheet_8
+  - first:
+      213: 4968405955091697685
+    second: Armature_Idle_00-sheet_9
+  - first:
+      213: -136325531909198219
+    second: Armature_Idle_00-sheet_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7913f6617afca8d10800000000000000
+      internalID: 2128742090428854679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 268
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22758202a557b5f00800000000000000
+      internalID: 1106607163396609826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 268
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ddba63c7d68bd50800000000000000
+      internalID: 6753268021502664038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 268
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7002a3f9a6b0d8f30800000000000000
+      internalID: 4579328948671488007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 268
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb5a8db0e1e3a040800000000000000
+      internalID: 4657814795000110030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 268
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c11863c307f1350800000000000000
+      internalID: 5989629433340828809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8958ebd795f83f6f0800000000000000
+      internalID: -652019906514090600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 24
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6250c3fd2cc948bf0800000000000000
+      internalID: -322960912480991962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 24
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eb34d00d4ef71250800000000000000
+      internalID: 5915476242254281699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 24
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5101d2574e253f440800000000000000
+      internalID: 4968405955091697685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_Idle_00-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 24
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e6cb8a6acab1ef0800000000000000
+      internalID: -136325531909198219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3edfe8eec5d8f194da01f144429950a5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":152.0,"y":244.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Armature_Idle_00-sheet_0: 2128742090428854679
+      Armature_Idle_00-sheet_1: 1106607163396609826
+      Armature_Idle_00-sheet_10: -136325531909198219
+      Armature_Idle_00-sheet_2: 6753268021502664038
+      Armature_Idle_00-sheet_3: 4579328948671488007
+      Armature_Idle_00-sheet_4: 4657814795000110030
+      Armature_Idle_00-sheet_5: 5989629433340828809
+      Armature_Idle_00-sheet_6: -652019906514090600
+      Armature_Idle_00-sheet_7: -322960912480991962
+      Armature_Idle_00-sheet_8: 5915476242254281699
+      Armature_Idle_00-sheet_9: 4968405955091697685
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

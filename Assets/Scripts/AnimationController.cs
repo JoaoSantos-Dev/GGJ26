@@ -38,7 +38,7 @@ public class AnimationController
     public void SetFlip(bool flip)
     {
         SpriteRenderer.flipX = flip;
-        MaskRenderer.flipX = flip;
+        MaskRenderer.flipX = !flip;
         HeadRenderer.flipX = flip;
     }
 }

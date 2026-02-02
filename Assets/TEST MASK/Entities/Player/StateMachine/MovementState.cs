@@ -33,7 +33,7 @@ public class MovementState : PlayerState
         var moveDirectionX = stateMachine.PlayerMovementHandler.CurrentMovementDirection.x;
         if (moveDirectionX == 0) return;
         var movingToRight = moveDirectionX > 0;
-        animationController.SetFlip(movingToRight);
+        animationController.SetFlip(!movingToRight);
     }
 
     public override void FixedUpdate()
