@@ -99,6 +99,7 @@ namespace UI
             image_MaskIcon.sprite = null;
             image_MaskIcon.enabled = false;
             maskBase = null;
+            image_maskDuration.fillAmount = 0;
         }
         
         private void OnCooldowMaskUpdated(float remeiningTime)

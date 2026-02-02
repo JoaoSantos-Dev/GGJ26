@@ -38,7 +38,7 @@ public class PlayerController : EntityBase, IDamageable
     [SerializeField] private float playerDefaultSpeed;
     private PlayerInputController inputController;
     private int maxHealth;
-    private PlayerInput playerInput;
+    [field: SerializeField] public PlayerInput PlayerInput { get; private set; } 
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerInventoryController InventoryController { get; private set; }
     public AnimationController AnimationController { get; private set; }
@@ -64,8 +64,8 @@ public class PlayerController : EntityBase, IDamageable
 
         AnimationController = new AnimationController(characterRenderer, maskRenderer, headRenderer, animator);
         maxHealth = Health;
-        inputController = new PlayerInputController(GetComponent<PlayerInput>());
-        MovementHandler = new PlayerMovementHandler(transform,
+        inputController = new PlayerInputController(PlayerInput);
+        MovementHandler = new PlayerMovementHandler(transform, 
             Rigidbody2D,
             playerDefaultSpeed,
             () => inputController.MovementDirection);
@@ -115,8 +115,8 @@ public class PlayerController : EntityBase, IDamageable
         Health -= Mathf.Clamp(damage, 0, maxHealth);
         HealthChanged?.Invoke(Health);
         ApplyHitEffect();
-        if (Health == 0) Death?.Invoke(this);
-
+        if (Health <= 0) Death?.Invoke(this);
+        
     }
 
     //Created only for test purposes.
@@ -167,4 +167,5 @@ public class PlayerController : EntityBase, IDamageable
         if (baseSpriteRenderer != null) baseSpriteRenderer.color = VisualConfig.Color;
 
     }
+
 }

@@ -17,6 +17,7 @@ namespace GameplaySystem.Spawning
         private BoxCollider2D area;
         [SerializeField] private GameplayController gameplayController;
         private Coroutine spawnCoroutine;
+        public float TempoTotal { get; private set; } = -1;
         private void Awake()
         {
             area = GetComponent<BoxCollider2D>();
@@ -60,6 +61,7 @@ namespace GameplaySystem.Spawning
                 while (TempoAteProximaHorda > 0)
                 {
                     TempoAteProximaHorda -= Time.deltaTime;
+                    TempoTotal += Time.deltaTime;
                     yield return null;
                 }
 
@@ -112,5 +114,7 @@ namespace GameplaySystem.Spawning
 
             return new Vector3(x, y, transform.position.z);
         }
+        
+        
     }
 }
