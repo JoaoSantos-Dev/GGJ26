@@ -58,6 +58,7 @@ public class PlayerInventoryController
     {
         EquipedMask.OnDurationExpired -= OnMaskExpired;
         EquipedMask.Destroy();
+        MaskUnequiped?.Invoke(EquipedMask);
         EquipedMask = null;
         maskRenderer.sprite = null;
         
