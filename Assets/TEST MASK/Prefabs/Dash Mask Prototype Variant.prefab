@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7931876717618382798, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.42
@@ -113,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0d4662328b137428aa32ecd4e5c97d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DashMask
+  <timeToGetMask>k__BackingField: 1
   <MaskSprite>k__BackingField: {fileID: 7922588671939504972, guid: 0c1fa11d77315244d9961c5135e349af, type: 3}
   <MaskDuration>k__BackingField: 7
   <HabilityCooldown>k__BackingField: 3
