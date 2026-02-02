@@ -70,7 +70,7 @@ namespace GameplaySystem
         {
             var color = gameSessionData.playerDatas[PlayerCount - 1].Color;
             var headSprite = gameSessionData.characterSprites.GetRandomHeadSprite();
-            playerController.SetVisual(headSprite,color);
+            playerController.SetCharacterData(headSprite,color, PlayerCount);
         }
 
         public void SetPlayerInputState(bool value)

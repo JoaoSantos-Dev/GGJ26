@@ -511,41 +511,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3729327540046316573}
     m_Modifications:
-    - target: {fileID: 1236378442483927444, guid: 5b12fe7e087eb3642b6f9b3211b5a3b7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1236378442483927444, guid: 5b12fe7e087eb3642b6f9b3211b5a3b7, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1236378442483927444, guid: 5b12fe7e087eb3642b6f9b3211b5a3b7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1236378442483927444, guid: 5b12fe7e087eb3642b6f9b3211b5a3b7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3083174817362692202, guid: 5b12fe7e087eb3642b6f9b3211b5a3b7, type: 3}
       propertyPath: m_Name
       value: UI GameOver
-      objectReference: {fileID: 0}
-    - target: {fileID: 4500591467821189358, guid: 5b12fe7e087eb3642b6f9b3211b5a3b7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4500591467821189358, guid: 5b12fe7e087eb3642b6f9b3211b5a3b7, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4500591467821189358, guid: 5b12fe7e087eb3642b6f9b3211b5a3b7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4500591467821189358, guid: 5b12fe7e087eb3642b6f9b3211b5a3b7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8666927172481699777, guid: 5b12fe7e087eb3642b6f9b3211b5a3b7, type: 3}
       propertyPath: m_Pivot.x

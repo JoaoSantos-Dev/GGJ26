@@ -18,13 +18,14 @@ namespace GameplaySystem
         [SerializeField] private PlayerInputManager  playerInputManager;
         [SerializeField] private PlayersLifeCycle playersLifeCycle;
         [SerializeField] private UIGameplayEvent uiGameplayEvent;
-        private VictoryCondition victoryCondition;
+        public VictoryCondition victoryCondition {get; private set;}
 
         public bool IsGameplayActive {get; private set;}= false;
         public event Action GameStart;
         public event Action GameOver;
         public event Action AllPlayerJoined;
         private List<PlayerController> playerJoined;
+
 
         private void Awake()
         {
@@ -58,6 +59,7 @@ namespace GameplaySystem
         {
             GameOver?.Invoke();
             IsGameplayActive = false;
+
         }
 
         private async void StartGame()

@@ -51,7 +51,7 @@ namespace UI
             UiGameOver.SetState(true);
         }
 
-        public async Task Start321GoEvent()
+        public async void Start321GoEvent()
         {
             text_321_go.enabled = true;
             for (int i = 3; i > 0; i--)

@@ -1,11 +1,10 @@
 using System;
 using Core;
 using GameplaySystem;
-using GameplaySystem.Spawning;
 using TMPro;
 using UI;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class UiGameOver : UiSwitch
 {
@@ -13,21 +12,24 @@ public class UiGameOver : UiSwitch
 
     [SerializeField] private Timer timer;
     [SerializeField] private TMP_Text timerText;
+    [SerializeField] private TMP_Text winnerText;
 
     void Start()
     {
         
         SetState(false);
-    }
 
-    private void OnEnable()
-    {
         gameplayController.GameOver += OnGameOver;
+        gameplayController.victoryCondition.PlayerWin += OnPlayerWin;
     }
 
-    private void OnDisable()
+    
+
+    private void OnDestroy()
     {
         gameplayController.GameOver -= OnGameOver;
+        gameplayController.victoryCondition.PlayerWin -= OnPlayerWin;
+
     }
 
     private void OnGameOver()
@@ -48,7 +50,12 @@ public class UiGameOver : UiSwitch
         SceneLoader.LoadGameplaySceneAsync();
     }
     
-    
+    private void OnPlayerWin(PlayerController controller)
+    {
+        winnerText.SetText("Player "+controller.CharacterConfig.ID.ToString());
+        winnerText.color = controller.CharacterConfig.Color;
+    }
+
     
     
     

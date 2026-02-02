@@ -63,11 +63,11 @@ namespace UI
         private void SetImageOutlineColor(PlayerController player)
         {
             image_healthBar.color = Color.white;
-            image_healthBarBG.color = player.VisualConfig.Color;
-            image_maskDurationBG.color = player.VisualConfig.Color;
+            image_healthBarBG.color = player.CharacterConfig.Color;
+            image_maskDurationBG.color = player.CharacterConfig.Color;
             
             var maskMaterial = image_MaskIcon.material;
-            maskMaterial.SetColor(oultlineColorPropertyID, player.VisualConfig.Color);
+            maskMaterial.SetColor(oultlineColorPropertyID, player.CharacterConfig.Color);
         }
         
         

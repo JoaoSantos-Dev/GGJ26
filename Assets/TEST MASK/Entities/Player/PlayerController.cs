@@ -10,13 +10,18 @@ using UnityEngine.Serialization;
 
 public class CharacterData
 {
-    public Color Color { get; set; }
-    public Sprite HeadSprite { get; set; }
+    private int id;
+    private readonly Color color;
+    private readonly Sprite headSprite;
+    public Color Color => color;
+    public Sprite HeadSprite => headSprite;
+    public int ID => id;
 
-    public CharacterData(Sprite sprite, Color color)
+    public CharacterData(Sprite sprite, Color color, int id)
     {
-        this.Color = color;
-        this.HeadSprite = sprite;
+        this.color = color;
+        this.headSprite = sprite;
+        this.id = id;
 
     }
 
@@ -24,7 +29,7 @@ public class CharacterData
 
 public class PlayerController : EntityBase, IDamageable
 {
-    public CharacterData VisualConfig { get; set; }
+    public CharacterData CharacterConfig { get; private set; }
     [field: SerializeField] public CharacterSpritesSO CharacterSprites { get; private set; }
     private Animator animator;
     [SerializeField] private SpriteRenderer baseSpriteRenderer;
@@ -153,18 +158,18 @@ public class PlayerController : EntityBase, IDamageable
         headRenderer.DOColor(Color.white, 0.3f);
 
         await UniTask.Delay(300);
-        headRenderer.sprite = VisualConfig.HeadSprite;
+        headRenderer.sprite = CharacterConfig.HeadSprite;
         maskRenderer.transform.localPosition = Vector3.up *-.1f;
         maskRenderer.transform.rotation = quaternion.identity;
 
 
     }
 
-    public void SetVisual(Sprite head, Color color)
+    public void SetCharacterData(Sprite head, Color color, int id)
     {
-        VisualConfig = new(head, color);
-        headRenderer.sprite = VisualConfig.HeadSprite;
-        if (baseSpriteRenderer != null) baseSpriteRenderer.color = VisualConfig.Color;
+        CharacterConfig = new(head, color, id);
+        headRenderer.sprite = CharacterConfig.HeadSprite;
+        if (baseSpriteRenderer != null) baseSpriteRenderer.color = CharacterConfig.Color;
 
     }
 
