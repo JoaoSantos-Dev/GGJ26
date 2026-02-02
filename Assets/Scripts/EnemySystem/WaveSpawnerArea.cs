@@ -106,5 +106,7 @@ namespace GameplaySystem.Spawning
 
             return new Vector3(x, y, transform.position.z);
         }
+        
+        
     }
 }

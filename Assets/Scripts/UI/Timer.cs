@@ -10,6 +10,11 @@ public class Timer : MonoBehaviour
     [SerializeField] private TMP_Text waveTimer;
     [SerializeField] private WaveSpawnerArea waveSpawner;
 
+    public string TotalTimeFormated()
+    {
+        float tempoTotal = Mathf.Ceil(waveSpawner.TempoTotal);
+        return string.Format("{0:00}:{1:00}", tempoTotal / 60, tempoTotal % 60);
+    }
     private void Update()
     {
         if (waveSpawner == null || waveTimer == null) return;
@@ -22,7 +27,10 @@ public class Timer : MonoBehaviour
 
         float tempo = Mathf.Ceil(waveSpawner.TempoAteProximaHorda);
         waveTimer.SetText(string.Format("{0:00}:{1:00}", tempo / 60, tempo % 60));
-        float tempoTotal = Mathf.Ceil(waveSpawner.TempoTotal);
-        timerText.SetText(string.Format("{0:00}:{1:00}", tempoTotal / 60, tempoTotal % 60));
+       
+        timerText.SetText(TotalTimeFormated());
     }
+    
+    
+    
 }
