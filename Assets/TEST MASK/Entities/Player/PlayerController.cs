@@ -130,8 +130,8 @@ public class PlayerController : EntityBase, IDamageable
         Destroy(gameObject);
     }
 
-    private static readonly Vector3 hitMaskLocalPosition = new Vector3(-.5f, 4.2f, 0.5f);
-    private static readonly Vector3 hitMaskLocalRotation = new Vector3(55, 8, 4);
+    private static readonly Vector3 hitMaskLocalPosition = new Vector3(0, 1f, 0);
+    private static readonly Vector3 hitMaskLocalRotation = new Vector3(-64, 0, 0);
 
     public async void ApplyHitEffect()
     {
@@ -154,7 +154,7 @@ public class PlayerController : EntityBase, IDamageable
 
         await UniTask.Delay(300);
         headRenderer.sprite = VisualConfig.HeadSprite;
-        maskRenderer.transform.localPosition = Vector3.up * 2;
+        maskRenderer.transform.localPosition = Vector3.up *-.1f;
         maskRenderer.transform.rotation = quaternion.identity;
 
 
