@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using DG.Tweening;
+using GameplaySystem;
 using UnityEngine;
 
 public class MaskSpawnManager : MonoBehaviour
@@ -10,12 +11,13 @@ public class MaskSpawnManager : MonoBehaviour
 
     [Header("Spawn Config")]
     [SerializeField] private SpawnConfig spawnConfig;
+    [SerializeField] private GameplayController gameplayController;
 
     public static MaskSpawnManager Instance { get; private set; }
 
     private MaskSpawnController maskSpawnController;
     private Cooldown spawnCooldown;
-    private Queue<GameObject> spawnQueue;
+    private Queue<GameObject> spawnQueue; //porque não uma fila de MaskBase?
     private List<MaskBase> masksOnScreen;
     private MaskType lastSpawnedMask;
 
@@ -29,6 +31,7 @@ public class MaskSpawnManager : MonoBehaviour
         spawnQueue = new Queue<GameObject>();
         masksOnScreen = new List<MaskBase>();
     }
+
 
     private void Update()
     {
@@ -79,7 +82,7 @@ public class MaskSpawnManager : MonoBehaviour
 
     private bool CanSpawnAnotherMask()
     {
-        return spawnCooldown.IsReady && masksOnScreen.Count < spawnConfig.MaxMaskOnScreen;
+        return spawnCooldown.IsReady && masksOnScreen.Count < spawnConfig.MaxMaskOnScreen && gameplayController.IsGameplayActive;
     }
 
     public void TrackMask(MaskBase mask)

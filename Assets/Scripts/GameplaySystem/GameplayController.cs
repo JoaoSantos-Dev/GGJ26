@@ -20,7 +20,7 @@ namespace GameplaySystem
         [SerializeField] private UIGameplayEvent uiGameplayEvent;
         private VictoryCondition victoryCondition;
 
-        private bool gameStarted = false;
+        public bool IsGameplayActive {get; private set;}= false;
         public event Action GameStart;
         public event Action GameOver;
         public event Action AllPlayerJoined;
@@ -57,6 +57,7 @@ namespace GameplaySystem
         private void OnPlayerWin(PlayerController obj)
         {
             GameOver?.Invoke();
+            IsGameplayActive = false;
         }
 
         private async void StartGame()
@@ -64,7 +65,7 @@ namespace GameplaySystem
             uiGameplayEvent.Start321GoEvent();
             await UniTask.Delay((int)(delayStartup*1000));
             GameStart?.Invoke();
-            gameStarted = true;
+            IsGameplayActive = true;
             playersLifeCycle.SetPlayerInputState(true);
 
 
