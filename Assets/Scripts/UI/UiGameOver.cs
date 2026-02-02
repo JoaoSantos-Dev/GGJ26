@@ -14,6 +14,12 @@ public class UiGameOver : UiSwitch
     [SerializeField] private Timer timer;
     [SerializeField] private TMP_Text timerText;
 
+    void Start()
+    {
+        
+        SetState(false);
+    }
+
     private void OnEnable()
     {
         gameplayController.GameOver += OnGameOver;
