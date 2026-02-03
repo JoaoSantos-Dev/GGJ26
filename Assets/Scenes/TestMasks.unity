@@ -261,13 +261,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield Mask Prototype  Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 7626189050046409682, guid: 6a279bfba31e1b844b781a51b04b6c5d, type: 3}
-      propertyPath: targetLayer
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7626189050046409682, guid: 6a279bfba31e1b844b781a51b04b6c5d, type: 3}
-      propertyPath: layer.m_Bits
-      value: 8
+    - target: {fileID: 6914075881721615359, guid: 6a279bfba31e1b844b781a51b04b6c5d, type: 3}
+      propertyPath: <DropRadius>k__BackingField
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -359,8 +355,7 @@ Transform:
   m_LocalPosition: {x: -4.06, y: -9.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1008352181}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &802524306
@@ -463,7 +458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1008352181
 Transform:
   m_ObjectHideFlags: 0
@@ -472,12 +467,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008352180}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.06, y: -9.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 498659478}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1008352182
 MonoBehaviour:
@@ -491,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b212f2879f94314b9eeaf23b3b56642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskSpawnManager
-  spawnArea: {x: 10, y: 10}
+  spawnArea: {x: 35.9, y: 18.6}
   spawnConfig: {fileID: 11400000, guid: 7e9e687a45522ad4f89c0accfb673bb2, type: 2}
   gameplayController: {fileID: 2119934058}
 --- !u!1 &1100510497
@@ -627,6 +622,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 735102159996297855, guid: d128468ea56d50347851623b29e67538, type: 3}
+      propertyPath: <DropRadius>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1843552397000773547, guid: d128468ea56d50347851623b29e67538, type: 3}
       propertyPath: m_Name
       value: Teleport Mask Prototype  Variant
@@ -698,6 +697,18 @@ PrefabInstance:
     - target: {fileID: 1430477460225216529, guid: 61242c903c7a8d64ebf911f9ba9088b2, type: 3}
       propertyPath: m_Name
       value: Push Mask Prototype Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464713995649014426, guid: 61242c903c7a8d64ebf911f9ba9088b2, type: 3}
+      propertyPath: pushForce
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464713995649014426, guid: 61242c903c7a8d64ebf911f9ba9088b2, type: 3}
+      propertyPath: targetLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464713995649014426, guid: 61242c903c7a8d64ebf911f9ba9088b2, type: 3}
+      propertyPath: <DropRadius>k__BackingField
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6835363537726471012, guid: 61242c903c7a8d64ebf911f9ba9088b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -791,6 +802,10 @@ PrefabInstance:
     - target: {fileID: 2201575248536141285, guid: 6b9d27b422d91df44b7a017c9e49e1a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128545876735506521, guid: 6b9d27b422d91df44b7a017c9e49e1a8, type: 3}
+      propertyPath: <DropRadius>k__BackingField
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5199188746820017822, guid: 6b9d27b422d91df44b7a017c9e49e1a8, type: 3}
       propertyPath: m_SortingLayer
@@ -1840,6 +1855,7 @@ SceneRoots:
   - {fileID: 371752962}
   - {fileID: 1100510498}
   - {fileID: 1000159757}
+  - {fileID: 1008352181}
   - {fileID: 802524307}
   - {fileID: 2307207194472656569}
   - {fileID: 8014592254341642844}

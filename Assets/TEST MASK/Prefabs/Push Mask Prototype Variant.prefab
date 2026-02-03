@@ -109,10 +109,10 @@ MonoBehaviour:
   <MaskSprite>k__BackingField: {fileID: 6454327944591047807, guid: 10264b56cfe1def48b63c1ed58fb82f3, type: 3}
   <MaskDuration>k__BackingField: 7
   <HabilityCooldown>k__BackingField: 3
-  <DropRadius>k__BackingField: 5
-  pushForce: 2
+  <DropRadius>k__BackingField: 3
+  pushForce: 3
   effectDistance: 4
   angle: 60
   targetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8

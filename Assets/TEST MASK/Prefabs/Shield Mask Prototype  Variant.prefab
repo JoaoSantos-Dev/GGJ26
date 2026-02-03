@@ -266,7 +266,7 @@ MonoBehaviour:
   <MaskSprite>k__BackingField: {fileID: -7251078805593371894, guid: aecc4456da1b3e14e8d075e72bc4c54d, type: 3}
   <MaskDuration>k__BackingField: 7
   <HabilityCooldown>k__BackingField: 3
-  <DropRadius>k__BackingField: 5
+  <DropRadius>k__BackingField: 3
   shieldDuration: 2
   defaultCastSpeed: 0.5
   characterPusher: {fileID: 7626189050046409682}

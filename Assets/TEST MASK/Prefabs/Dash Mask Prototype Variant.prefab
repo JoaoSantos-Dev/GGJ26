@@ -50,11 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.42
+      value: -6.31
       objectReference: {fileID: 0}
     - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7
+      value: -7.76
       objectReference: {fileID: 0}
     - target: {fileID: 8389975484585993358, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_LocalPosition.z
@@ -117,6 +117,6 @@ MonoBehaviour:
   <MaskSprite>k__BackingField: {fileID: 7922588671939504972, guid: 0c1fa11d77315244d9961c5135e349af, type: 3}
   <MaskDuration>k__BackingField: 7
   <HabilityCooldown>k__BackingField: 3
-  <DropRadius>k__BackingField: 5
+  <DropRadius>k__BackingField: 3
   dashDistance: 5
   dashSpeed: 0.3

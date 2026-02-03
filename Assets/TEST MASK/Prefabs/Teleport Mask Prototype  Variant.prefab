@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2505555930961692661, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2505555930961692661, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       propertyPath: m_SortingLayerID
@@ -105,10 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f93bf375279c8645a970d41e38d33ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportMask
+  <timeToGetMask>k__BackingField: 1
   <MaskSprite>k__BackingField: {fileID: -7445013535228688498, guid: 632ff43018bb72f499d120e97922072e, type: 3}
   <MaskDuration>k__BackingField: 7
   <HabilityCooldown>k__BackingField: 2
-  <DropRadius>k__BackingField: 5
+  <DropRadius>k__BackingField: 3
   randomTeleport: 0
   teleportDistance: 5
   teleportRadius: 10

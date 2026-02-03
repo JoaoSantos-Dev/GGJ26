@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum MaskType { Dash, Shield, Teleport, Push }
 public class MaskBase : MonoBehaviour
@@ -71,7 +72,7 @@ public class MaskBase : MonoBehaviour
     {
         Debug.Log("Dropping Mask");
         MaskSpawnManager.Instance.TrackMask(this);
-        Vector3 randomPosition = UnityEngine.Random.insideUnitCircle * UnityEngine.Random.Range(1, DropRadius + 1);
+        Vector3 randomPosition = Random.insideUnitCircle.normalized *DropRadius;
         transform.parent = null;
         Action completed = null;
         if (TryGetComponent(out Collider2D collider))
@@ -79,7 +80,9 @@ public class MaskBase : MonoBehaviour
             collider.transform.localScale = Vector3.one;
             completed = () => collider.enabled = true;
         }
-        transform.DOMove(transform.position + randomPosition, 1f).OnComplete(() =>
+
+        maskRenderer.enabled = true;
+        transform.DOMove(transform.position + randomPosition, 0.5f).OnComplete(() =>
         {
             completed?.Invoke();
         });
