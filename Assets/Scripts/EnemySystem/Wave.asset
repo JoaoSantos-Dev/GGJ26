@@ -16,9 +16,9 @@ MonoBehaviour:
   - nomeDaHorda: Horda 1
     inimigosPossiveis:
     - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}
-    totalDeInimigos: 8
+    totalDeInimigos: 5
     intervaloEntreSpawn: 1
-    quantidadePorVez: 4
+    quantidadePorVez: 1
   - nomeDaHorda: Horda 2
     inimigosPossiveis:
     - {fileID: 3403453931726126003, guid: 206904a01635c9c1d96448c2e11a011d, type: 3}

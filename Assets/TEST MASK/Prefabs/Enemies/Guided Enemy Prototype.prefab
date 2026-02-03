@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca914e29e5078a409926330ce54082a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  stunEffect: {fileID: 8284689674635151864}
   animPulseFrequency: 0.1
   damage: 10
 --- !u!50 &4462161840478018120
@@ -177,7 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f01745fd7cafd1399ff4efcd68ae18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuidedEnemyIA
-  stunEffect: {fileID: 8284689674635151864}
   speed: 2
   retargetTime: 30
 --- !u!70 &4362588845911199207

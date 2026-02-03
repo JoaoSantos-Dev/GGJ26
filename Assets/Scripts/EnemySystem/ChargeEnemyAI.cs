@@ -1,44 +1,9 @@
-using StunSystem;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace GameplaySystem.AI
 {
-    public class EnemyAI : StunBase
-    {
-        protected EnemyController enemyController;
-        public bool Active { get; set; } = true;
-
-        protected virtual void Awake()
-        {
-            enemyController = GetComponent<EnemyController>();
-        }
-
-        protected virtual void OnEnable()
-        {
-            StunStateChange += OnStunStateChange;
-        }
-
-        protected virtual void OnDisable()
-        {
-            StunStateChange -= OnStunStateChange;
-        }
-
-        private void OnStunStateChange(bool value)
-        {
-            Active = !value;
-            
-        }
-
-
-        protected virtual void UpdateAIBehaviour()
-        {
-            if (!Active) return;
-        }
-        
-    }
-    
-    
+  
     public class ChargeEnemyAI : EnemyAI
     {
         private enum EnemyState { Patrolling, Charging, Dashing }
