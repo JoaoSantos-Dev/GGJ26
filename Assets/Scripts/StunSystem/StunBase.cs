@@ -1,5 +1,5 @@
 ﻿using System;
-using Cysharp.Threading.Tasks;
+using System.Collections;
 using UnityEngine;
 
 namespace StunSystem
@@ -10,19 +10,22 @@ namespace StunSystem
 
         public event Action<bool> StunStateChange;
 
+        private Coroutine stunCoroutine;
 
         public void Apply()
         {
-            StunBehaviour();
+           if(stunCoroutine != null) StopCoroutine(stunCoroutine);
+          stunCoroutine =  StartCoroutine(StunBehaviour());
         }
 
-        protected async virtual void StunBehaviour()
+        protected IEnumerator StunBehaviour()
         {
             stunEffect.Play();
             StunStateChange?.Invoke(true);
-            await UniTask.Delay((int)(IStunable.Duration*1000));
+            yield return new WaitForSeconds(IStunable.Duration);
             StunStateChange?.Invoke(false);
             stunEffect.Stop();
+            print("stun STOP");
         }
     }
 

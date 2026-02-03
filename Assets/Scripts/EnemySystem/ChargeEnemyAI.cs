@@ -1,17 +1,9 @@
-using System;
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
 using StunSystem;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-
-
-
 namespace GameplaySystem.AI
 {
-
-    
     public class EnemyAI : StunBase
     {
         protected EnemyController enemyController;
@@ -24,19 +16,20 @@ namespace GameplaySystem.AI
 
         protected virtual void OnEnable()
         {
-            StunStateChange += (value) => Active = value;
+            StunStateChange += OnStunStateChange;
         }
 
         protected virtual void OnDisable()
         {
-            StunStateChange -= (value) => Active = value;
+            StunStateChange -= OnStunStateChange;
         }
 
-        protected override void StunBehaviour()
-         {
-             base.StunBehaviour();
-             
-         }
+        private void OnStunStateChange(bool value)
+        {
+            Active = !value;
+            
+        }
+
 
         protected virtual void UpdateAIBehaviour()
         {

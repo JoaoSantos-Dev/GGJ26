@@ -54,7 +54,6 @@ public class MaskBase : MonoBehaviour
     public virtual void OnEquip(PlayerMovementHandler playerMovementHandler)
     {
         pickingFeedback.enabled = false;
-        Debug.Log("mask used");
         this.playerMovementHandler = playerMovementHandler;
         MaskDurationCountdown.Start(MaskDuration, () => OnDurationExpired?.Invoke());
         MaskSpawnManager.Instance.UntrackMask(this);
@@ -70,7 +69,6 @@ public class MaskBase : MonoBehaviour
 
     private void Drop()
     {
-        Debug.Log("Dropping Mask");
         MaskSpawnManager.Instance.TrackMask(this);
         Vector3 randomPosition = Random.insideUnitCircle.normalized *DropRadius;
         transform.parent = null;

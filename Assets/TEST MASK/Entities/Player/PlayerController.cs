@@ -92,7 +92,6 @@ public class PlayerController : EntityBase, IDamageable
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.TryGetComponent(out MaskBase mask))
         {
             // Test
