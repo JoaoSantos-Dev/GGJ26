@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2201575248536141285}
     m_Modifications:
+    - target: {fileID: 162317766845129931, guid: 6ee8ab5129b8b98468568f58264e2a27, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3896559005457289376, guid: 6ee8ab5129b8b98468568f58264e2a27, type: 3}
       propertyPath: m_Name
       value: Stun applier

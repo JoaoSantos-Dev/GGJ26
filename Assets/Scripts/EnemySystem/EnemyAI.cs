@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace GameplaySystem.AI
 {
+    
     [RequireComponent(typeof(Rigidbody2D))]
     public class FollowerEnemyAI : EnemyAI
     {
@@ -31,12 +32,14 @@ namespace GameplaySystem.AI
         }
         
         private void Update()
-        {
+        {           
+            if (!Active) return;
             UpdateTarget();
         }
 
         private void FixedUpdate()
         {
+            if (!Active) return;
             UpdateAIBehaviour();
 
         }

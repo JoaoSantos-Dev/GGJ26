@@ -3,11 +3,14 @@ using UnityEngine;
 
 namespace StunSystem
 {
-   [RequireComponent(typeof(CircleCollider2D))]
     public class StunApplier : MonoBehaviour
     {
-        [SerializeField] private LayerMask targetLayer;
-
+        private Collider2D collider2D;
+        private void Awake()
+        {
+            collider2D = GetComponent<Collider2D>();
+            collider2D.isTrigger = true;
+        }
 
         private void Start()
         {
@@ -22,8 +25,8 @@ namespace StunSystem
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.layer != targetLayer) return;
             if(!other.TryGetComponent(out IStunable stunable)) return;
+            print("STUNNING "+other.name);
             stunable.Apply();
         }
 

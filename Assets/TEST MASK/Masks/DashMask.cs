@@ -50,10 +50,17 @@ public class DashMask : MaskBase
     {
         stunApplier.SetActive(true);
         
+        //TODO: Refact later
+        playerMovementHandler.EntityTransform.GetComponent<Collider2D>().enabled = false;
+
     }
     private void OnHabilityEndMethod()
     {
         stunApplier.SetActive(false);
+        
+        //TODO: Refact later
+        playerMovementHandler.EntityTransform.GetComponent<Collider2D>().enabled = true;
+
     }
     
     
