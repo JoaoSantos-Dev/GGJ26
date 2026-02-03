@@ -261,6 +261,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield Mask Prototype  Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7626189050046409682, guid: 6a279bfba31e1b844b781a51b04b6c5d, type: 3}
+      propertyPath: targetLayer
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626189050046409682, guid: 6a279bfba31e1b844b781a51b04b6c5d, type: 3}
+      propertyPath: layer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -503,7 +511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1100510498
 Transform:
   m_ObjectHideFlags: 0
