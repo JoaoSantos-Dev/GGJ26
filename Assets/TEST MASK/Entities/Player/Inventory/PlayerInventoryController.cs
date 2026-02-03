@@ -41,12 +41,12 @@ public class PlayerInventoryController
 
     private void EquipNewMask(MaskBase mask)
     {
-        UnityEngine.Debug.Log("Equiping mask");
+        UnityEngine.Debug.Log("Equiping new mask");
         maskRenderer.sprite = mask.MaskSprite;
         maskRenderer.enabled = true;
+        mask.transform.SetParent(playerMovementHandler.EntityTransform, false);
         mask.transform.localPosition = Vector3.zero;
         mask.OnDurationExpired += OnMaskExpired;
-        mask.transform.SetParent(playerMovementHandler.EntityTransform, false);
         mask.maskRenderer.enabled = (false);
         EquipedMask = mask;
 
