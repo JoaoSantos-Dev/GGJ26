@@ -81,17 +81,20 @@ public class PlayerController : EntityBase, IDamageable
 
     private void Update()
     {
+        if (StunActive) return;
         StateMachine.Update();
         // if (inputController.Hability.WasPressedThisFrame()) TakeDamage(20);
     }
 
     private void FixedUpdate()
     {
+        if (StunActive) return;
         StateMachine.FixedUpdate();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(StunActive) return;
         if (other.TryGetComponent(out MaskBase mask))
         {
             // Test

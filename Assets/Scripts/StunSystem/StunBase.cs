@@ -6,6 +6,7 @@ namespace StunSystem
 {
     public class StunBase : MonoBehaviour, IStunable
     {
+        public bool StunActive { get; set; } = false;
         [SerializeField] private ParticleSystem stunEffect;
 
         public event Action<bool> StunStateChange;
@@ -22,8 +23,10 @@ namespace StunSystem
         {
             stunEffect.Play();
             StunStateChange?.Invoke(true);
+            StunActive = true;
             yield return new WaitForSeconds(IStunable.Duration);
             StunStateChange?.Invoke(false);
+            StunActive = false;
             stunEffect.Stop();
             print("stun STOP");
         }
