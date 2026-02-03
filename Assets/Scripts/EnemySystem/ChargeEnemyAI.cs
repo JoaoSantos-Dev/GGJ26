@@ -1,19 +1,51 @@
 using System;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
+using StunSystem;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+
+
+
 namespace GameplaySystem.AI
 {
-    public class EnemyAI : MonoBehaviour
+
+    
+    public class EnemyAI : StunBase
     {
         protected EnemyController enemyController;
+        public bool Active { get; set; } = true;
 
         protected virtual void Awake()
         {
             enemyController = GetComponent<EnemyController>();
         }
+
+        protected virtual void OnEnable()
+        {
+            StunStateChange += (value) => Active = value;
+        }
+
+        protected virtual void OnDisable()
+        {
+            StunStateChange -= (value) => Active = value;
+        }
+
+        protected override void StunBehaviour()
+         {
+             base.StunBehaviour();
+             
+         }
+
+        protected virtual void UpdateAIBehaviour()
+        {
+            if (!Active) return;
+        }
         
     }
+    
+    
     public class ChargeEnemyAI : EnemyAI
     {
         private enum EnemyState { Patrolling, Charging, Dashing }
@@ -43,6 +75,12 @@ namespace GameplaySystem.AI
 
         private void Update()
         {
+            UpdateAIBehaviour();
+        }
+
+        protected override void UpdateAIBehaviour()
+        {
+            base.UpdateAIBehaviour();
             switch (_currentState)
             {
                 case EnemyState.Patrolling:
@@ -56,7 +94,6 @@ namespace GameplaySystem.AI
                     break;
             }
             enemyController.SetRendererFlip(_patrolDirection.x < 0);
-
         }
 
 
@@ -65,7 +102,7 @@ namespace GameplaySystem.AI
             _patrolTimer -= Time.deltaTime;
             //Perigoso: pois quando houver obstáculos, o transform será forçado a ocupar o espaço
             //não respeitando a física.
-            transform.Translate(_patrolDirection * patrolSpeed * Time.deltaTime);
+            transform.Translate(_patrolDirection * (patrolSpeed * Time.deltaTime));
 
             if (_patrolTimer <= 0)
             {

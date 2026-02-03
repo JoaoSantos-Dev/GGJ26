@@ -22,6 +22,13 @@ namespace GameplaySystem.AI
 
         private void Update()
         {
+            UpdateAIBehaviour();
+        }
+
+
+        protected override void UpdateAIBehaviour()
+        {
+            base.UpdateAIBehaviour();
             timer += Time.deltaTime;
 
             if (timer >= retargetTime || target == null)
@@ -40,6 +47,7 @@ namespace GameplaySystem.AI
                 enemyController.SetRendererFlip(isLookingRight);
             }
         }
+
 
         private void PickTarget()
         {

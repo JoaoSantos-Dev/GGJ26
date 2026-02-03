@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace GameplaySystem.AI
@@ -19,6 +20,7 @@ namespace GameplaySystem.AI
         private PlayersLifeCycle playersLifeCycle;
 
         public Vector2 TargetDirection;
+        
 
 
         protected override void Awake()
@@ -27,7 +29,7 @@ namespace GameplaySystem.AI
             rb = GetComponent<Rigidbody2D>();
             playersLifeCycle = FindFirstObjectByType<PlayersLifeCycle>();
         }
-
+        
         private void Update()
         {
             UpdateTarget();
@@ -35,9 +37,18 @@ namespace GameplaySystem.AI
 
         private void FixedUpdate()
         {
+            UpdateAIBehaviour();
+
+        }
+
+        protected override void UpdateAIBehaviour()
+        {
+            base.UpdateAIBehaviour();
             Move();
             enemyController.SetRendererFlip(TargetDirection.x < 0);
+            
         }
+
 
         private void UpdateTarget()
         {

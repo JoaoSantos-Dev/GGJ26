@@ -51,6 +51,9 @@ TagManager:
   - name: Props
     uniqueID: 3138387201
     locked: 0
+  - name: Effects
+    uniqueID: 365887213
+    locked: 0
   - name: HUD
     uniqueID: 1394461879
     locked: 0
