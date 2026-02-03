@@ -1,4 +1,5 @@
 using System;
+using Core;
 using UnityEngine;
 
 public class PushMask : MaskBase
@@ -75,7 +76,12 @@ public class PushMask : MaskBase
         {
             var targetPosition = collider2D.transform.position;
             var targetDirection = (targetPosition - transform.position).normalized;
-            if (IsInsideArc(targetPosition,GetDirection()))
+            Vector2 center = transform.position;
+            bool targetInsideArc = center.IsInsideArc(targetPosition, 
+                GetDirection(), 
+                effectDistance, 
+                angle);
+            if ( targetInsideArc)
             {
                 if (!collider2D.TryGetComponent(out EntityBase entity)) return;
                 entity.MovementHandler.PushEntity(pushForce,targetDirection, 0.5f);
@@ -85,13 +91,6 @@ public class PushMask : MaskBase
 
     }
     
-    bool IsInsideArc(Vector2 targetPos, Vector2 direction)
-    {
-        Vector2 dir = (targetPos - (Vector2)transform.position);
-        if (dir.magnitude > effectDistance) return false;
-        float a = Vector2.Angle(direction, dir);
-        return a <= angle * 0.5f;
-    }
 
     // private void OnTriggerEnter2D(Collider2D collision)
     // {
@@ -134,13 +133,15 @@ public class PushMask : MaskBase
 
     private void OnDrawGizmos()
     {
-        Vector3 leftDir  = Quaternion.Euler(0, 0, +angle * 0.5f) * Vector2.one.normalized;
-        Vector3 rightDir = Quaternion.Euler(0, 0, -angle * 0.5f) * Vector2.one.normalized;
+        if (playerMovementHandler == null) return;
+        Vector2 inputDirection = playerMovementHandler.LastMovementDirection.normalized;
+        Vector3 leftDir  = Quaternion.Euler(0, 0, +angle * 0.5f) * inputDirection;
+        Vector3 rightDir = Quaternion.Euler(0, 0, -angle * 0.5f) * inputDirection;
         
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(transform.position, transform.position + leftDir * effectDistance);
         Gizmos.DrawLine(transform.position, transform.position + rightDir * effectDistance);
-        Gizmos.DrawLine(transform.position, transform.position +(Vector3) Vector2.one.normalized*effectDistance);
+        Gizmos.DrawLine(transform.position, transform.position +(Vector3) inputDirection*effectDistance);
     }
 
 

@@ -36,7 +36,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &825485387986033097
 SpriteRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -55,8 +54,6 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -78,11 +75,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1156580095
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.2901961}
   m_FlipX: 0
@@ -92,6 +87,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &4086926921003411342
 CircleCollider2D:
@@ -144,7 +140,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 8
-  force: 3
+  force: 1
 --- !u!1001 &8279788778173149641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -243,9 +239,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4136885043991760891, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6914075881721615359}
-    - targetCorrespondingSourceObject: {fileID: 4136885043991760891, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5100206351003418215}
   m_SourcePrefab: {fileID: 100100000, guid: 8d87f52b5fa535a4399edc324c729d55, type: 3}
 --- !u!4 &470791392121935175 stripped
 Transform:
@@ -277,30 +270,3 @@ MonoBehaviour:
   shieldDuration: 2
   defaultCastSpeed: 0.5
   characterPusher: {fileID: 7626189050046409682}
---- !u!50 &5100206351003418215
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5444450632201666098}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
