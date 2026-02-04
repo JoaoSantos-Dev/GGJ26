@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f01745fd7cafd1399ff4efcd68ae18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuidedEnemyIA
-  speed: 2
+  speed: 4
   retargetTime: 30
 --- !u!70 &4362588845911199207
 CapsuleCollider2D:

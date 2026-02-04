@@ -240,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3237644181673364669}
   - component: {fileID: 4566487739970425660}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ CircleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1eb42c584f0bf554e87028d76f5cfbbe, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
   characterRenderer: {fileID: 8471155906965197467}
   headRenderer: {fileID: 8826602809062583696}
   maskRenderer: {fileID: 5610174226418416084}
-  <Health>k__BackingField: 50
+  <Health>k__BackingField: 100
   playerDefaultSpeed: 300
   <PlayerInput>k__BackingField: {fileID: 2166248355441508229}
 --- !u!50 &2587574203023481042
@@ -374,7 +374,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: e00f4e6eac8829540890c9c45a01b001, type: 2}
+  m_Material: {fileID: 6200000, guid: 1eb42c584f0bf554e87028d76f5cfbbe, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -425,7 +425,7 @@ CircleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1eb42c584f0bf554e87028d76f5cfbbe, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -677,6 +677,26 @@ PrefabInstance:
     - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649989877094450612, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649989877094450612, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 58.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649989877094450612, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649989877094450612, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649989877094450612, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

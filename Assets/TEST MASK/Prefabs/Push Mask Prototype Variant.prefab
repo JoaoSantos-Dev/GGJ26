@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PushMask
   <timeToGetMask>k__BackingField: 1
   <MaskSprite>k__BackingField: {fileID: 6454327944591047807, guid: 10264b56cfe1def48b63c1ed58fb82f3, type: 3}
-  <MaskDuration>k__BackingField: 7
+  <MaskDuration>k__BackingField: 16
   <HabilityCooldown>k__BackingField: 3
   <DropRadius>k__BackingField: 3
   pushForce: 3

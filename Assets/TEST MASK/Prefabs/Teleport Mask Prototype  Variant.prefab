@@ -107,9 +107,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TeleportMask
   <timeToGetMask>k__BackingField: 1
   <MaskSprite>k__BackingField: {fileID: -7445013535228688498, guid: 632ff43018bb72f499d120e97922072e, type: 3}
-  <MaskDuration>k__BackingField: 7
-  <HabilityCooldown>k__BackingField: 2
+  <MaskDuration>k__BackingField: 15
+  <HabilityCooldown>k__BackingField: 3
   <DropRadius>k__BackingField: 3
   randomTeleport: 0
-  teleportDistance: 5
+  teleportDistance: 3
   teleportRadius: 10

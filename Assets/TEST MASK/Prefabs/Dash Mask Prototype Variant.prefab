@@ -204,7 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DashMask
   <timeToGetMask>k__BackingField: 1
   <MaskSprite>k__BackingField: {fileID: 7922588671939504972, guid: 0c1fa11d77315244d9961c5135e349af, type: 3}
-  <MaskDuration>k__BackingField: 7
+  <MaskDuration>k__BackingField: 15
   <HabilityCooldown>k__BackingField: 3
   <DropRadius>k__BackingField: 3
   dashDistance: 5
