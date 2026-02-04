@@ -84,6 +84,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -105,6 +107,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1156580095
   m_SortingLayer: 3
   m_SortingOrder: 1
@@ -195,6 +198,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -216,6 +221,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1156580095
   m_SortingLayer: 3
   m_SortingOrder: 1
@@ -224,7 +230,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.64, y: 7.54}
+  m_Size: {x: 1.5, y: 2.49}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -504,6 +510,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -525,6 +533,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1156580095
   m_SortingLayer: 3
   m_SortingOrder: 1
@@ -591,6 +600,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -612,6 +623,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1467949315
   m_SortingLayer: 2
   m_SortingOrder: 0
@@ -652,51 +664,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.69546247
       objectReference: {fileID: 0}
     - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.71853936
       objectReference: {fileID: 0}
     - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.004005591
       objectReference: {fileID: 0}
     - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.0041385046
       objectReference: {fileID: 0}
     - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: -91.87
       objectReference: {fileID: 0}
     - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8649989877094450612, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8649989877094450612, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
-      propertyPath: ShapeModule.angle
-      value: 58.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 8649989877094450612, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 8649989877094450612, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 8649989877094450612, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 1.64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -52,6 +52,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -73,6 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1156580095
   m_SortingLayer: 3
   m_SortingOrder: 0
@@ -241,22 +244,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}
-      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3692148326766660810, guid: f82f8dcf99cd5f645985d4bd6e2a066a, type: 3}

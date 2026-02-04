@@ -1,0 +1,2054 @@
+fileFormatVersion: 2
+guid: 5aca0203c9d28a74baad848f62bb08af
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8587740201145151533
+    second: Armature_tex_0
+  - first:
+      213: 4076480308809909627
+    second: Armature_tex_1
+  - first:
+      213: -6954911746008804769
+    second: Armature_tex_2
+  - first:
+      213: -1136473603897745240
+    second: Armature_tex_3
+  - first:
+      213: 4681410810473143517
+    second: Armature_tex_4
+  - first:
+      213: 6402111568823652779
+    second: Armature_tex_5
+  - first:
+      213: 7273677598355789400
+    second: Armature_tex_6
+  - first:
+      213: 6751935010077210028
+    second: Armature_tex_7
+  - first:
+      213: 221736860191695460
+    second: Armature_tex_8
+  - first:
+      213: -8492374531512512712
+    second: Armature_tex_9
+  - first:
+      213: 65190981726494347
+    second: Armature_tex_10
+  - first:
+      213: -8530490760101175846
+    second: Armature_tex_11
+  - first:
+      213: 3486096443803301460
+    second: Armature_tex_12
+  - first:
+      213: -5436759270588530097
+    second: Armature_tex_13
+  - first:
+      213: -8226070967569371368
+    second: Armature_tex_14
+  - first:
+      213: 3471972641595657639
+    second: Armature_tex_15
+  - first:
+      213: 1128567786580177894
+    second: Armature_tex_16
+  - first:
+      213: -4032210955243688706
+    second: Armature_tex_17
+  - first:
+      213: 8329262138015248913
+    second: Armature_tex_18
+  - first:
+      213: 1776980464709273887
+    second: Armature_tex_19
+  - first:
+      213: 7951040208526964396
+    second: Armature_tex_20
+  - first:
+      213: -3510045607485140085
+    second: Armature_tex_21
+  - first:
+      213: 6935486116007632331
+    second: Armature_tex_22
+  - first:
+      213: -7970942756228288408
+    second: Armature_tex_23
+  - first:
+      213: -8985409510810581307
+    second: Armature_tex_24
+  - first:
+      213: -7565707960859184191
+    second: Armature_tex_25
+  - first:
+      213: -264785703619908802
+    second: Armature_tex_26
+  - first:
+      213: 6511372069711988659
+    second: Armature_tex_27
+  - first:
+      213: -884641896936416017
+    second: Armature_tex_28
+  - first:
+      213: 6695191153234891444
+    second: Armature_tex_29
+  - first:
+      213: -5782075648821051815
+    second: Armature_tex_30
+  - first:
+      213: -4166502809031056145
+    second: Armature_tex_31
+  - first:
+      213: -1916481309049169460
+    second: Armature_tex_32
+  - first:
+      213: -9161173490124628691
+    second: Armature_tex_33
+  - first:
+      213: 4402886217120343944
+    second: Armature_tex_34
+  - first:
+      213: 3406969738359609044
+    second: Armature_tex_35
+  - first:
+      213: 5180318011387969168
+    second: Armature_tex_36
+  - first:
+      213: 8795351687208398128
+    second: Armature_tex_37
+  - first:
+      213: -5702313134445291887
+    second: Armature_tex_38
+  - first:
+      213: -7238173203998398950
+    second: Armature_tex_39
+  - first:
+      213: -2693498194693673240
+    second: Armature_tex_40
+  - first:
+      213: 6264040089292300665
+    second: Armature_tex_41
+  - first:
+      213: -4393841726790198731
+    second: Armature_tex_42
+  - first:
+      213: -3436079028848694332
+    second: Armature_tex_43
+  - first:
+      213: 4673356673881424722
+    second: Armature_tex_44
+  - first:
+      213: -2048402804639601944
+    second: Armature_tex_45
+  - first:
+      213: 3546448077811632585
+    second: Armature_tex_46
+  - first:
+      213: -7983238253535527175
+    second: Armature_tex_47
+  - first:
+      213: 1781729650257585294
+    second: Armature_tex_48
+  - first:
+      213: 5010432242394264125
+    second: Armature_tex_49
+  - first:
+      213: 670238581695688665
+    second: Armature_tex_50
+  - first:
+      213: 1967376786154770980
+    second: Armature_tex_51
+  - first:
+      213: 122538357588695485
+    second: Armature_tex_52
+  - first:
+      213: -8574634315716154673
+    second: Armature_tex_53
+  - first:
+      213: -7503437450248507727
+    second: Armature_tex_54
+  - first:
+      213: -8371058698816227563
+    second: Armature_tex_55
+  - first:
+      213: 2649535673322334510
+    second: Armature_tex_56
+  - first:
+      213: 8666113837856611393
+    second: Armature_tex_57
+  - first:
+      213: -6540433225504336611
+    second: Armature_tex_58
+  - first:
+      213: -6491738453321409209
+    second: Armature_tex_59
+  - first:
+      213: 2557844770244615214
+    second: Armature_tex_60
+  - first:
+      213: 5411710539694270289
+    second: Armature_tex_61
+  - first:
+      213: 2898419819511666596
+    second: Armature_tex_62
+  - first:
+      213: 625821105113349097
+    second: Armature_tex_63
+  - first:
+      213: 2545510505223523408
+    second: Armature_tex_64
+  - first:
+      213: 2421196496037825750
+    second: Armature_tex_65
+  - first:
+      213: 48686773046611845
+    second: Armature_tex_66
+  - first:
+      213: -6682716149075387553
+    second: Armature_tex_67
+  - first:
+      213: -6821585483856564419
+    second: Armature_tex_68
+  - first:
+      213: 6694060053248596190
+    second: Armature_tex_69
+  - first:
+      213: 404774474549568959
+    second: Armature_tex_70
+  - first:
+      213: -2436830242734115735
+    second: Armature_tex_71
+  - first:
+      213: -3357490569652867244
+    second: Armature_tex_72
+  - first:
+      213: -3166695137300754657
+    second: Armature_tex_73
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Armature_tex_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1805
+        width: 167
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dfc66f69c732d880800000000000000
+      internalID: -8587740201145151533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_1
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1816
+        width: 167
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b754d742e31929830800000000000000
+      internalID: 4076480308809909627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1799
+        width: 155
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5214fe9d903b7f90800000000000000
+      internalID: -6954911746008804769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_3
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 1896
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0211f474f6a30f0800000000000000
+      internalID: -1136473603897745240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_4
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1744
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddcdce53456b7f040800000000000000
+      internalID: 4681410810473143517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_5
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1896
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba117205d8ed8d850800000000000000
+      internalID: 6402111568823652779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_6
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 1744
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85696b4fc3b41f460800000000000000
+      internalID: 7273677598355789400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_7
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 1896
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5fc2e4e11b3bd50800000000000000
+      internalID: 6751935010077210028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_8
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1665
+        width: 163
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4622651ef74c31300800000000000000
+      internalID: 221736860191695460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_9
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 1800
+        width: 152
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f4f9dab56052a80800000000000000
+      internalID: -8492374531512512712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_10
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 1831
+        width: 168
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8edd5c3ada97e000800000000000000
+      internalID: 65190981726494347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_11
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 1805
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: addda64a9db9d9980800000000000000
+      internalID: -8530490760101175846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_12
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 1805
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 456f5a9de3a116030800000000000000
+      internalID: 3486096443803301460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_13
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 1828
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f424243af30cc84b0800000000000000
+      internalID: -5436759270588530097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1546
+        width: 152
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fafd0e90027dd80800000000000000
+      internalID: -8226070967569371368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_15
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1561
+        width: 161
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad0f24e8bcee2030800000000000000
+      internalID: 3471972641595657639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_16
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1584
+        width: 167
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e37f082c6a79af00800000000000000
+      internalID: 1128567786580177894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_17
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1564
+        width: 161
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efce241ff75ba08c0800000000000000
+      internalID: -4032210955243688706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_18
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1592
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1127281c8cb779370800000000000000
+      internalID: 8329262138015248913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_19
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 1498
+        width: 152
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f190ecb515a19a810800000000000000
+      internalID: 1776980464709273887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_20
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1419
+        width: 152
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6f81871f4c75e60800000000000000
+      internalID: 7951040208526964396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_21
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 1420
+        width: 152
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b839d64fd10d94fc0800000000000000
+      internalID: -3510045607485140085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_22
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1420
+        width: 152
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcdd94170ebcf3060800000000000000
+      internalID: 6935486116007632331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_23
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 1420
+        width: 152
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8603a0a8bc5816190800000000000000
+      internalID: -7970942756228288408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_24
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 1421
+        width: 152
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c608ba18a96d4380800000000000000
+      internalID: -8985409510810581307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_25
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1562
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3b4a6c1b4310790800000000000000
+      internalID: -7565707960859184191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1303
+        width: 162
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b22223eca435cf0800000000000000
+      internalID: -264785703619908802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_27
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1322
+        width: 143
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b7459f066a0d5a50800000000000000
+      internalID: 6511372069711988659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_28
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1372
+        width: 205
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec5dabb1ee19b3f0800000000000000
+      internalID: -884641896936416017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_29
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1412
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b257e791e81aec50800000000000000
+      internalID: 6695191153234891444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_30
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1260
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95eb59705d0f1cfa0800000000000000
+      internalID: -5782075648821051815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_31
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 1260
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4690035cb9d26c0800000000000000
+      internalID: -4166502809031056145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_32
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 1260
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc9d273476a4765e0800000000000000
+      internalID: -1916481309049169460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_33
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 1177
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d556baf39fcd080800000000000000
+      internalID: -9161173490124628691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_34
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 1178
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 887ebeddfa13a1d30800000000000000
+      internalID: 4402886217120343944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_35
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1319
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d61e671decf74f20800000000000000
+      internalID: 3406969738359609044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1048
+        width: 154
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e765ce8cf24e740800000000000000
+      internalID: 5180318011387969168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_37
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1051
+        width: 154
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d60be72cd5f0a70800000000000000
+      internalID: 8795351687208398128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_38
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1121
+        width: 152
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19618579a605dd0b0800000000000000
+      internalID: -5702313134445291887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_39
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1220
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16ace802d7dc8b90800000000000000
+      internalID: -7238173203998398950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_40
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 977
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eea026a9a5ce9ad0800000000000000
+      internalID: -2693498194693673240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_41
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 977
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971e21dd5475ee650800000000000000
+      internalID: 6264040089292300665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_42
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1017
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a9163aa30f503c0800000000000000
+      internalID: -4393841726790198731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_43
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 1017
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cbed4114589050d0800000000000000
+      internalID: -3436079028848694332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_44
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1076
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253476762291bd040800000000000000
+      internalID: 4673356673881424722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 790
+        width: 152
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eaea88808c9293e0800000000000000
+      internalID: -2048402804639601944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_46
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 797
+        width: 155
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c94454acb3873130800000000000000
+      internalID: 3546448077811632585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_47
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 799
+        width: 152
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe74bcfa17d53190800000000000000
+      internalID: -7983238253535527175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_48
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 969
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8462694da9f9b810800000000000000
+      internalID: 1781729650257585294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_49
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 817
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32f21bf391a88540800000000000000
+      internalID: 5010432242394264125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_50
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 739
+        width: 153
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dfabb0607a2d4900800000000000000
+      internalID: 670238581695688665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_51
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 777
+        width: 152
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422da1e63c68d4b10800000000000000
+      internalID: 1967376786154770980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_52
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 775
+        width: 151
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db91f6bacf753b100800000000000000
+      internalID: 122538357588695485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_53
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 935
+        width: 152
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca2ddc2587c00980800000000000000
+      internalID: -8574634315716154673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_54
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 935
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be2397d46f6ed790800000000000000
+      internalID: -7503437450248507727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_55
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 833
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5177d17177604db80800000000000000
+      internalID: -8371058698816227563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 152
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e296a1438aa05c420800000000000000
+      internalID: 2649535673322334510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_57
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 550
+        width: 156
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c5a88de98344870800000000000000
+      internalID: 8666113837856611393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_58
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 647
+        width: 248
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d15d6a452a6bb35a0800000000000000
+      internalID: -6540433225504336611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_59
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 583
+        width: 151
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d980b7546b8e5a0800000000000000
+      internalID: -6491738453321409209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_60
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 502
+        width: 147
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c5509344a4f7320800000000000000
+      internalID: 2557844770244615214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_61
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 616
+        width: 225
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157e6b930124a1b40800000000000000
+      internalID: 5411710539694270289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 274
+        width: 152
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7d1f72871493820800000000000000
+      internalID: 2898419819511666596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_63
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 299
+        width: 152
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb3937bafc5fa800800000000000000
+      internalID: 625821105113349097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_64
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 301
+        width: 152
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c8fdb5158735320800000000000000
+      internalID: 2545510505223523408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_65
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 344
+        width: 142
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc41c59261d99120800000000000000
+      internalID: 2421196496037825750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_66
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 263
+        width: 143
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f04b4bc58fca000800000000000000
+      internalID: 48686773046611845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_67
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 386
+        width: 156
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b5897a1193243a0800000000000000
+      internalID: -6682716149075387553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_68
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 155
+        width: 153
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3fa4cd052cd451a0800000000000000
+      internalID: -6821585483856564419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_69
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 152
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8d30bd62416ec50800000000000000
+      internalID: 6694060053248596190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_70
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 49
+        width: 152
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb52ca17d3c0e9500800000000000000
+      internalID: 404774474549568959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_71
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 58
+        width: 152
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96477eb1ec3ae2ed0800000000000000
+      internalID: -2436830242734115735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_72
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 24
+        width: 143
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fed1b9d1cc761d0800000000000000
+      internalID: -3357490569652867244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_tex_73
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 24
+        width: 143
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f4b3dec83ad04d0800000000000000
+      internalID: -3166695137300754657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Armature_tex_0: -8587740201145151533
+      Armature_tex_1: 4076480308809909627
+      Armature_tex_10: 65190981726494347
+      Armature_tex_11: -8530490760101175846
+      Armature_tex_12: 3486096443803301460
+      Armature_tex_13: -5436759270588530097
+      Armature_tex_14: -8226070967569371368
+      Armature_tex_15: 3471972641595657639
+      Armature_tex_16: 1128567786580177894
+      Armature_tex_17: -4032210955243688706
+      Armature_tex_18: 8329262138015248913
+      Armature_tex_19: 1776980464709273887
+      Armature_tex_2: -6954911746008804769
+      Armature_tex_20: 7951040208526964396
+      Armature_tex_21: -3510045607485140085
+      Armature_tex_22: 6935486116007632331
+      Armature_tex_23: -7970942756228288408
+      Armature_tex_24: -8985409510810581307
+      Armature_tex_25: -7565707960859184191
+      Armature_tex_26: -264785703619908802
+      Armature_tex_27: 6511372069711988659
+      Armature_tex_28: -884641896936416017
+      Armature_tex_29: 6695191153234891444
+      Armature_tex_3: -1136473603897745240
+      Armature_tex_30: -5782075648821051815
+      Armature_tex_31: -4166502809031056145
+      Armature_tex_32: -1916481309049169460
+      Armature_tex_33: -9161173490124628691
+      Armature_tex_34: 4402886217120343944
+      Armature_tex_35: 3406969738359609044
+      Armature_tex_36: 5180318011387969168
+      Armature_tex_37: 8795351687208398128
+      Armature_tex_38: -5702313134445291887
+      Armature_tex_39: -7238173203998398950
+      Armature_tex_4: 4681410810473143517
+      Armature_tex_40: -2693498194693673240
+      Armature_tex_41: 6264040089292300665
+      Armature_tex_42: -4393841726790198731
+      Armature_tex_43: -3436079028848694332
+      Armature_tex_44: 4673356673881424722
+      Armature_tex_45: -2048402804639601944
+      Armature_tex_46: 3546448077811632585
+      Armature_tex_47: -7983238253535527175
+      Armature_tex_48: 1781729650257585294
+      Armature_tex_49: 5010432242394264125
+      Armature_tex_5: 6402111568823652779
+      Armature_tex_50: 670238581695688665
+      Armature_tex_51: 1967376786154770980
+      Armature_tex_52: 122538357588695485
+      Armature_tex_53: -8574634315716154673
+      Armature_tex_54: -7503437450248507727
+      Armature_tex_55: -8371058698816227563
+      Armature_tex_56: 2649535673322334510
+      Armature_tex_57: 8666113837856611393
+      Armature_tex_58: -6540433225504336611
+      Armature_tex_59: -6491738453321409209
+      Armature_tex_6: 7273677598355789400
+      Armature_tex_60: 2557844770244615214
+      Armature_tex_61: 5411710539694270289
+      Armature_tex_62: 2898419819511666596
+      Armature_tex_63: 625821105113349097
+      Armature_tex_64: 2545510505223523408
+      Armature_tex_65: 2421196496037825750
+      Armature_tex_66: 48686773046611845
+      Armature_tex_67: -6682716149075387553
+      Armature_tex_68: -6821585483856564419
+      Armature_tex_69: 6694060053248596190
+      Armature_tex_7: 6751935010077210028
+      Armature_tex_70: 404774474549568959
+      Armature_tex_71: -2436830242734115735
+      Armature_tex_72: -3357490569652867244
+      Armature_tex_73: -3166695137300754657
+      Armature_tex_8: 221736860191695460
+      Armature_tex_9: -8492374531512512712
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
