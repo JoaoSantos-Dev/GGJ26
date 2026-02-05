@@ -16,7 +16,6 @@ namespace GameplaySystem.AI
         private Transform currentTarget;
         private float retargetTimer;
 
-        private Rigidbody2D rb;
         private PlayersLifeCycle playersLifeCycle;
 
         public Vector2 TargetDirection;
@@ -26,7 +25,6 @@ namespace GameplaySystem.AI
         protected override void Awake()
         {
             base.Awake();
-            rb = GetComponent<Rigidbody2D>();
             playersLifeCycle = FindFirstObjectByType<PlayersLifeCycle>();
         }
         

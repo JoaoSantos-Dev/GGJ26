@@ -142,6 +142,7 @@ namespace LevelSystem
         
         void Start()
         {
+            if (!updateOnValidate) return;
            RegenerateTiles();
         }
         

@@ -12,6 +12,7 @@ public class DeathState : PlayerState
 
     public override void OnStateEnter()
     {
+        playerController.AnimationController.PlayDeath();
         StartDeathBehaviour();
         playerController.Rigidbody2D.simulated = false;
     }

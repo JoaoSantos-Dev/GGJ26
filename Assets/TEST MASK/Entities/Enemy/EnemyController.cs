@@ -13,25 +13,40 @@ public class EnemyController : EntityBase
      private SpriteRenderer spriteRenderer;
      
     private Vector3 initialScale;
-     private Tween animationTween;
-    private FollowerEnemyAI followerAI;
+     private Tween tweenAnimation;
     private void Awake()
     {
         initialScale = transform.lossyScale;
         MovementHandler = new EnemyMovementHandler(transform);
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        
     }
 
     private void OnEnable()
     {
         StartMoveAnimation();
+        StunStateChange += OnStunStateChange;
 
     }
+
 
     private void OnDisable()
     {
         StopMoveAnimation();
+        StunStateChange -= OnStunStateChange;
     }
+    private void OnStunStateChange(bool value)
+    {
+        if (value)
+        {
+            tweenAnimation.Pause();
+        }
+        else
+        {
+            tweenAnimation.Play();
+        }
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -47,14 +62,14 @@ public class EnemyController : EntityBase
 
     public void StartMoveAnimation()
     {
-        animationTween.Kill();
-        animationTween = transform.DOScaleY(initialScale.y * 1.2f, animPulseFrequency).SetEase(Ease.InOutQuad).SetLoops(-1, LoopType.Yoyo);
+        tweenAnimation.Kill();
+        tweenAnimation = transform.DOScaleY(initialScale.y * 1.2f, animPulseFrequency).SetEase(Ease.InOutQuad).SetLoops(-1, LoopType.Yoyo);
     }
 
     public void StopMoveAnimation()
     {
-        animationTween.Kill();
-        animationTween = transform.DOScale(initialScale, animPulseFrequency).SetEase(Ease.InOutQuad);
+        tweenAnimation.Kill();
+        tweenAnimation = transform.DOScale(initialScale, animPulseFrequency).SetEase(Ease.InOutQuad);
     }
 
     public void SetRendererFlip(bool value)
@@ -65,21 +80,21 @@ public class EnemyController : EntityBase
 
     public void SetScale(Vector3 scale, float duration = 0.1f)
     {
-        animationTween.Kill();
+        tweenAnimation.Kill();
         transform.localScale = initialScale;
-        animationTween = transform.DOScale(scale, duration).SetEase(Ease.InOutQuad);
+        tweenAnimation = transform.DOScale(scale, duration).SetEase(Ease.InOutQuad);
     }
     public void SetScaleY(float value, float duration = 0.1f)
     {
-        animationTween.Kill();
+        tweenAnimation.Kill();
         transform.localScale = initialScale;
-        animationTween = transform.DOScaleY(value, duration).SetEase(Ease.InOutQuad);
+        tweenAnimation = transform.DOScaleY(value, duration).SetEase(Ease.InOutQuad);
     }
     public void SetScaleX(float value, float duration = 0.1f)
     {
-        animationTween.Kill();
+        tweenAnimation.Kill();
         transform.localScale = initialScale;
-        animationTween = transform.DOScaleX(value, duration).SetEase(Ease.InOutQuad);
+        tweenAnimation = transform.DOScaleX(value, duration).SetEase(Ease.InOutQuad);
     }
 
     public void SelfDestroy()

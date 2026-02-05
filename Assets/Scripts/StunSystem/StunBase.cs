@@ -27,8 +27,8 @@ namespace StunSystem
             yield return new WaitForSeconds(IStunable.Duration);
             StunStateChange?.Invoke(false);
             StunActive = false;
+            stunEffect.Pause();
             stunEffect.Stop();
-            print("stun STOP");
         }
     }
 

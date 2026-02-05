@@ -79,6 +79,22 @@ public class PlayerController : EntityBase, IDamageable
             MovementHandler as PlayerMovementHandler, this);
     }
 
+
+    private void OnEnable()
+    {
+        StunStateChange += OnStunStateChange;
+    }
+
+    private void OnDisable()
+    {
+        StunStateChange -= OnStunStateChange;
+    }
+
+    private void OnStunStateChange(bool value)
+    {
+        if(value) AnimationController.PlayStun();
+    }
+
     private void Update()
     {
         if (StunActive) return;
