@@ -6,7 +6,6 @@ using Playersystem;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 public class CharacterData
 {
@@ -34,8 +33,8 @@ public class PlayerController : EntityBase, IDamageable
     private Animator animator;
     [SerializeField] private SpriteRenderer baseSpriteRenderer;
     [SerializeField] private SpriteRenderer characterRenderer;
-    [SerializeField] private SpriteRenderer headRenderer;
-    [SerializeField] private SpriteRenderer maskRenderer;
+    [field: SerializeField] public SpriteRenderer HeadRenderer { get;private set; }
+    [field: SerializeField] public SpriteRenderer MaskRenderer { get; private set; }
     [field: SerializeField]
     [field: Min(0)]
     public int Health { get; set; } = 100;
@@ -48,13 +47,12 @@ public class PlayerController : EntityBase, IDamageable
     public PlayerInventoryController InventoryController { get; private set; }
     public AnimationController AnimationController { get; private set; }
 
-    public Rigidbody2D Rigidbody2D { get; private set; }
     public event Action<int> HealthChanged;
     public event Action<PlayerController> Death;
 
-    private void Awake()
+    protected override void Awake()
     {
-        Rigidbody2D = GetComponent<Rigidbody2D>();
+        base.Awake();
         animator = GetComponentInChildren<Animator>();
 
         // --- JOÃO: ADICIONEI ESTE BLOCO AQUI ---
@@ -67,14 +65,14 @@ public class PlayerController : EntityBase, IDamageable
             }
         }
 
-        AnimationController = new AnimationController(characterRenderer, maskRenderer, headRenderer, animator);
+        AnimationController = new AnimationController(characterRenderer, MaskRenderer, HeadRenderer, animator);
         maxHealth = Health;
         inputController = new PlayerInputController(PlayerInput);
         MovementHandler = new PlayerMovementHandler(transform, 
             Rigidbody2D,
             playerDefaultSpeed,
             () => inputController.MovementDirection);
-        InventoryController = new PlayerInventoryController(maskRenderer, MovementHandler as PlayerMovementHandler);
+        InventoryController = new PlayerInventoryController(MaskRenderer, MovementHandler as PlayerMovementHandler);
         StateMachine = new PlayerStateMachine(inputController, InventoryController,
             MovementHandler as PlayerMovementHandler, this);
     }
@@ -91,8 +89,18 @@ public class PlayerController : EntityBase, IDamageable
     }
 
     private void OnStunStateChange(bool value)
-    {
-        if(value) AnimationController.PlayStun();
+    { 
+        HeadRenderer.enabled = !value;
+        MaskRenderer.enabled = !value;
+        Rigidbody2D.linearVelocity = Vector2.zero;
+        Rigidbody2D.simulated = !value;
+        if (value)
+        {
+            AnimationController.PlayStun();
+            
+        }
+        else AnimationController.PlayIdle();
+   
     }
 
     private void Update()
@@ -166,19 +174,19 @@ public class PlayerController : EntityBase, IDamageable
         }
         // ------------------------------
 
-        maskRenderer.transform.localPosition = hitMaskLocalPosition;
-        maskRenderer.transform.rotation = Quaternion.Euler(hitMaskLocalRotation);
+        MaskRenderer.transform.localPosition = hitMaskLocalPosition;
+        MaskRenderer.transform.rotation = Quaternion.Euler(hitMaskLocalRotation);
 
-        headRenderer.sprite = CharacterSprites.HitFace;
-        headRenderer.color = Color.red;
+        HeadRenderer.sprite = CharacterSprites.HitFace;
+        HeadRenderer.color = Color.red;
         characterRenderer.color = Color.red;
         characterRenderer.DOColor(Color.white, 0.3f);
-        headRenderer.DOColor(Color.white, 0.3f);
+        HeadRenderer.DOColor(Color.white, 0.3f);
 
         await UniTask.Delay(300);
-        headRenderer.sprite = CharacterConfig.HeadSprite;
-        maskRenderer.transform.localPosition = Vector3.up *-.1f;
-        maskRenderer.transform.rotation = quaternion.identity;
+        HeadRenderer.sprite = CharacterConfig.HeadSprite;
+        MaskRenderer.transform.localPosition = Vector3.up *-.1f;
+        MaskRenderer.transform.rotation = quaternion.identity;
 
 
     }
@@ -186,7 +194,7 @@ public class PlayerController : EntityBase, IDamageable
     public void SetCharacterData(Sprite head, Color color, int id)
     {
         CharacterConfig = new(head, color, id);
-        headRenderer.sprite = CharacterConfig.HeadSprite;
+        HeadRenderer.sprite = CharacterConfig.HeadSprite;
         if (baseSpriteRenderer != null) baseSpriteRenderer.color = CharacterConfig.Color;
 
     }

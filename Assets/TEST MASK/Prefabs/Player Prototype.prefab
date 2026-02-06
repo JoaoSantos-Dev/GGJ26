@@ -111,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: -1156580095
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7922588671939504972, guid: 0c1fa11d77315244d9961c5135e349af, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -119,7 +119,7 @@ SpriteRenderer:
   m_Size: {x: 1.68, y: 1.49}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
 --- !u!1 &5525727366136585867
@@ -359,8 +359,8 @@ MonoBehaviour:
   <CharacterSprites>k__BackingField: {fileID: 11400000, guid: 850e517d895c7a042b77761583b851d7, type: 2}
   baseSpriteRenderer: {fileID: 7983792065449420583}
   characterRenderer: {fileID: 8471155906965197467}
-  headRenderer: {fileID: 8826602809062583696}
-  maskRenderer: {fileID: 5610174226418416084}
+  <HeadRenderer>k__BackingField: {fileID: 8826602809062583696}
+  <MaskRenderer>k__BackingField: {fileID: 5610174226418416084}
   <Health>k__BackingField: 100
   playerDefaultSpeed: 300
   <PlayerInput>k__BackingField: {fileID: 2166248355441508229}

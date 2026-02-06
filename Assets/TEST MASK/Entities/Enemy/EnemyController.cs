@@ -14,8 +14,9 @@ public class EnemyController : EntityBase
      
     private Vector3 initialScale;
      private Tween tweenAnimation;
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         initialScale = transform.lossyScale;
         MovementHandler = new EnemyMovementHandler(transform);
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();

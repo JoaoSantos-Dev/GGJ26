@@ -32,10 +32,11 @@ public class DeathState : PlayerState
     }
 
     private async void StartDeathBehaviour()
-    {
-        Debug.Log("Player death");
-       await UniTask.Delay(500);
-       playerController.Destroy();
+    { 
+        playerController.HeadRenderer.enabled = false;
+        playerController.MaskRenderer.enabled = false;
+        await UniTask.Delay(1000);
+        playerController.Destroy();
     }
     
     

@@ -49,6 +49,13 @@ public class AnimationController
 
     public void PlayStun()
     {
+        StopMoveAnimation();
         Animator.Play(UnityEngine.Animator.StringToHash("Stun"));
+    }
+
+    public void PlayIdle()
+    {
+        Animator.Play(UnityEngine.Animator.StringToHash("Idle"));
+
     }
 }
